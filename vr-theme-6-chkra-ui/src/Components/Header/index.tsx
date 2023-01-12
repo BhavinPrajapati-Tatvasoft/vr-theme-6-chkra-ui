@@ -1,6 +1,7 @@
 import {
   Avatar,
   Button,
+  Divider,
   Hide,
   IconButton,
   Image,
@@ -11,6 +12,7 @@ import {
   MenuItem,
   MenuList,
   Show,
+  Text,
 } from "@chakra-ui/react";
 import {
   adminUser,
@@ -51,7 +53,7 @@ const Header: React.FC = () => {
         <div className="right-content">
           <div className="search-wrapper">
             <div>
-              <Input type="text" placeholder="Search" />
+              <Input type="text" variant="outline" placeholder="Search" />
               <IconButton
                 variant="outline"
                 aria-label="Search"
@@ -80,14 +82,19 @@ const Header: React.FC = () => {
             className="icon-btn"
             icon={<Avatar name="Notification" src={notificationIcon} />}
           />
+          <Divider orientation="vertical" />
           <Menu>
             <MenuButton
               as={Button}
-              rightIcon={<Image src={profileDownArrowIcon} alt="Down Arrow" />}
+              rightIcon={
+                <Hide below="lg">
+                  <Image src={profileDownArrowIcon} alt="Down Arrow" />
+                </Hide>
+              }
             >
               <Image src={adminUser} alt="User" className="user-profile-pic" />
               <Hide below="lg">
-                <span>Jhon Doe</span>
+                <Text>Jhon Doe</Text>
               </Hide>
             </MenuButton>
             <MenuList>

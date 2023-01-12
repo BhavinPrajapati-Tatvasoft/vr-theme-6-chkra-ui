@@ -163,7 +163,6 @@ body {
     color: #4B4B4B;
     -ms-overflow-style: scrollbar;
     -webkit-font-smoothing: subpixel-antialiased;
-    font-family: 'Ubuntu', sans-serif;
 }
 
 .wrapper {
@@ -243,3 +242,27 @@ input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration {
     -webkit-appearance: none;
 }
+
+.main-content{ padding: 127px 40px 40px; transition: all 0.3s; width: calc(100% - var(--sidebar-width)); margin-left: var(--sidebar-width); }
+.page-title{ padding-bottom: 21px; color: #4B4B4B;}
+/* Button
+--------------------------------------------------------------------------------------------------------*/
+.icon-btn.chakra-button{width: 53px; height: 47px;}
+.icon-btn .chakra-avatar{height: 26px; width: 26px;}
+/* Header
+--------------------------------------------------------------------------------------------------------*/
+.header{ display: flex; align-items: center; background: #FFFFFF; box-shadow: 0px 1px 19px 1px rgb(0 0 0 / 8%); padding: 20px 30px; position: fixed; top: 0; left: 0; right: 0; z-index: 2;}
+.header .toggle-button{margin-right: 30px;}
+.header .logo{display: inline-block; vertical-align: middle; margin-right: 8px;}
+.header .logo img{display: block;}
+.header .search-wrapper{position: relative; max-width: 304px; width: 100%; margin-right: 10px;}
+.header .search-wrapper .chakra-input{height: 48px; border-radius: 10px; border-color: #EAEAEA; padding: 8px 44px 8px 20px;}
+.header .search-wrapper .chakra-input:focus{border-color: #59B997;}
+.header .search-wrapper .chakra-button{position: absolute; right: 14px; top: 50%; transform: translateY(-50%); padding: 6px; border-radius: 50%; background-color: transparent !important; border: none !important;height: auto;}
+.header .search-wrapper .chakra-button:focus, .header .search-wrapper .chakra-button:hover{background-color: rgba(0, 0, 0, 0.1) !important;}
+.header .search-wrapper .chakra-button .chakra-avatar{height: 18px; width: 18px;}
+.header .right-content{display: flex; align-items: center; justify-content: flex-end; flex-grow: 1;}
+.header .right-content .icon-btn{margin: 0 10px;}
+.header .chakra-menu__menu-button{background-color: transparent; border: 1px solid;}
+.header .chakra-menu__menu-button >span{display: flex;align-items: center;}
+.header .chakra-menu__menu-button .user-profile-pic{margin-right: 8px;}

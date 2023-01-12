@@ -2,7 +2,7 @@ import { ChakraProvider } from "@chakra-ui/react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Login from "./Pages/Login";
 import Dashboard from "./Pages/Dashboard";
-import theme from "./theme";
+import theme from "./App.Theme";
 
 function App() {
   return (

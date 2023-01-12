@@ -19,87 +19,7 @@ License: none (public domain)
     --sidebar-width: 238px;
 }
 
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {
     margin: 0;
     padding: 0;
     border: 0;
@@ -266,3 +186,35 @@ input[type="search"]::-webkit-search-results-decoration {
 .header .chakra-menu__menu-button{background-color: transparent; border: 1px solid;}
 .header .chakra-menu__menu-button >span{display: flex;align-items: center;}
 .header .chakra-menu__menu-button .user-profile-pic{margin-right: 8px;}
+
+/* Login Page
+--------------------------------------------------------------------------------------------------------*/
+.login-wrapper {min-height: 100vh;}
+.login-container {display: flex;height: 100vh;}
+.login-hero {background-color: #59B997;padding: 50px 70px 60px;position: relative;}
+.login-wrapper .login-logo {display: block;max-width: 178px;height: 38px;}
+.login-wrapper .login-logo > img {height: auto;width: auto;}
+.login-wrapper .login-content {height: 100%;display: flex;flex-direction: column;justify-content: space-between;}
+.login-wrapper .login-mockup {display: flex;align-items: center;justify-content: center;margin-top: 54px;}
+.login-wrapper .login-mockup>img {display: block;max-width: 100%;}
+.login-wrapper .copyright-text {font-weight: 400;font-size: 15px;line-height: 17px;color: #FFFFFF;}
+.login-wrapper .login-main {padding: 58px 20px;position: relative;}
+.login-wrapper .login-main h2 {padding-bottom: 12px;display: flex;}
+.login-wrapper .login-main h5 {color: #424242;font-weight: 500;padding-bottom: 22px;}
+.login-wrapper .forgot-password {display: flex;align-items: center;justify-content: space-between;margin-bottom: 20px;}
+.login-wrapper .form-wrapper {display: flex;flex-direction: column;height: 100%;max-width: 452px;width: 100%;margin: 0 auto;justify-content: center;}
+.login-wrapper .form-wrapper form {margin: auto 0;padding: 10px 0;}
+.login-wrapper .form-wrapper .mobile-logo {display: none;}
+.login-wrapper .login-main .sign-up-link {padding-top: 30px;font-weight: 400;font-size: 15px;line-height: 17px;color: #424242;text-align: center;}
+.login-wrapper .login-main .sign-up-link a {font-weight: 700;font-size: 15px;line-height: 17px;text-transform: uppercase;color: #59B997;position: relative;}
+.login-wrapper .login-main .sign-up-link a::after {content: '';display: block;width: 0;height: 2px;transition: width .3s;background-color: #59B997;position: absolute;left: 0;}
+.login-wrapper .login-main .sign-up-link a:hover::after,
+.login-wrapper .login-main .sign-up-link a:focus::after {width: 100%;}
+.login-main .copyright-text {color: #9C9C9C;display: none;}
+.login-wrapper .other-links {display: flex;align-items: center;justify-content: flex-end;gap: 26px;}
+.custom-link {font-weight: 400;font-size: 15px;line-height: 17px;color: #9C9C9C;transition: all 300ms ease;position: relative;}
+.custom-link::after {content: '';display: block;width: 0;height: 2px;transition: width .3s;background-color: #59B997;}
+.custom-link:hover,
+.custom-link:focus {color: #59B997;}
+.custom-link:hover::after,
+.custom-link:focus::after {width: 100%;}

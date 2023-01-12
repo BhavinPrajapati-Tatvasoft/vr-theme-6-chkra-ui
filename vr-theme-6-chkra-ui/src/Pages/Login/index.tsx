@@ -69,18 +69,6 @@ const Login = () => {
                 <Link to="#" title='Terms and Condition' className='custom-link'>Terms and Condition</Link>
                 <Link to="#" title='Help' className='custom-link'>Help</Link>
               </div>
-              <Menu>
-                <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
-                  Actions
-                </MenuButton>
-                <MenuList>
-                  <MenuItem>Download</MenuItem>
-                  <MenuItem>Create a Copy</MenuItem>
-                  <MenuItem>Mark as Draft</MenuItem>
-                  <MenuItem>Delete</MenuItem>
-                  <MenuItem>Attend a Workshop</MenuItem>
-                </MenuList>
-              </Menu>
               <Show below='lg'>
                 <Text className="copyright-text"> © 2021 Company. All Rights Reserved. </Text>
               </Show>

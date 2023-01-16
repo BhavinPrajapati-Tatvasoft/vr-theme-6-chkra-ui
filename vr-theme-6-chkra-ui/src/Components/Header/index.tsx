@@ -24,6 +24,7 @@ import {
   profileDownArrowIcon,
   searchIcon,
 } from "../../assets/images";
+import { Link as customLink} from 'react-router-dom';
 
 const Header: React.FC = () => {
   return (
@@ -100,7 +101,7 @@ const Header: React.FC = () => {
             <MenuList>
               <MenuItem>Profile</MenuItem>
               <MenuItem>My Account</MenuItem>
-              <MenuItem>Logout</MenuItem>
+              <MenuItem as={customLink} to="/login">Logout</MenuItem>
             </MenuList>
           </Menu>
         </div>

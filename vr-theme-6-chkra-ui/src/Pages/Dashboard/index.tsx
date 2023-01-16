@@ -1,3 +1,4 @@
+import * as React from 'react';
 import { Card, Grid, GridItem, IconButton, Image, Img, Menu, MenuButton, MenuItem, MenuList, Progress, Table, TableContainer, Tbody, Td, Text, Th, Thead, Tr } from "@chakra-ui/react";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
@@ -6,8 +7,24 @@ import Header from "../../Components/Header";
 import Sidebar from "../../Components/Sidebar";
 import CountUp from "react-countup";
 import WeeklyReport from "../../Components/Charts/weeklyReport";
+import { useRef } from 'react';
+import gsap from 'gsap';
+const { useLayoutEffect } = React;
 
 const Dashboard: React.FC = () => {
+
+  //GSAP Animation
+  const progressTimelineMain = useRef(null);
+  useLayoutEffect(() => {
+      let statisticsSvg = gsap.timeline();
+      statisticsSvg.fromTo(".statistics-card .img-block > svg", { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 1 });
+
+      let pageText = gsap.timeline();
+      pageText.fromTo(".page-title", { y: "-40px", opacity: 0 }, { y: 0, opacity: 1, duration: 1 });
+      pageText.fromTo(".data-info", { y: "20px", opacity: 0 }, { y: 0, opacity: 1, stagger: 0.3 });
+      pageText.fromTo("h5", { y: "20px", opacity: 0 }, { y: 0, opacity: 1, stagger: 0.3 });
+
+  }, []);
 
   return (
     <>
@@ -28,7 +45,7 @@ const Dashboard: React.FC = () => {
                   <Text as='h3'>
                     <CountUp end={6387} />
                   </Text>
-                  <p>Property Sold</p>
+                  <p className="data-info">Property Sold</p>
                 </div>
                 <div className="img-block">
                   <img src={barChartIcon} alt="Property Sold" />
@@ -41,7 +58,7 @@ const Dashboard: React.FC = () => {
                   <Text as='h3'>
                     <CountUp end={9712} prefix="$" separator="," />
                   </Text>
-                  <p>Income</p>
+                  <p className="data-info">Income</p>
                 </div>
                 <div className="img-block">
                   <img src={walletIcon} alt="Income" />
@@ -54,7 +71,7 @@ const Dashboard: React.FC = () => {
                   <Text as='h3'>
                     <CountUp end={965} />
                   </Text>
-                  <p>Expense</p>
+                  <p className="data-info">Expense</p>
                 </div>
                 <div className="img-block">
                   <img src={moneyCoinIcon} alt="Expense" />
@@ -71,7 +88,7 @@ const Dashboard: React.FC = () => {
                   <Text as='h3'>
                     <CountUp end={8723} prefix="$" separator="," />
                   </Text>
-                  <p>Property Rented</p>
+                  <p className="data-info">Property Rented</p>
                 </div>
                 <div className="img-block">
                   <img src={keyIcon} alt="Property Rented" />

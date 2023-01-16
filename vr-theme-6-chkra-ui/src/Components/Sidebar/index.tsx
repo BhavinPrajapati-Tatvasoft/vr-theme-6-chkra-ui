@@ -1,10 +1,24 @@
+import * as React from 'react';
 import { List, ListItem } from "@chakra-ui/react";
 import { NavLink } from "react-router-dom";
 import { dashboardIcon, maintenanceIcon, offerIcon, salesIcon, settingsIcon, userIcon } from "../../assets/images";
+import gsap from 'gsap';
 
-
+const { useLayoutEffect } = React;
 
 const Sidebar: React.FC = () => {
+  //GSAP Animation
+  useLayoutEffect(() => {
+    gsap.fromTo(".sidebar li a", {
+      opacity: 0,
+      x: -40,
+    }, {
+      opacity: 1,
+      x: 0,
+      stagger: 0.3,
+    }
+    );
+  }, []);
   function closeSidebar() {
     document.body.classList.remove("open-sidebar");
   }

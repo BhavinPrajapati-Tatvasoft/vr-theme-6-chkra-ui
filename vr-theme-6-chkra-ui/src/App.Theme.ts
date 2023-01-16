@@ -43,6 +43,8 @@ const theme = extendTheme({
           _focus: { bg: "rgb(62, 129, 105)", boxShadow: "none" },
           "@media (max-width:767px)": {
             padding: "8px 30px",
+            fontSize: "16px",
+            lineHeight: "20px",
           },
         },
         outline: {
@@ -61,6 +63,8 @@ const theme = extendTheme({
           _focus: { bg: "rgba(0,0,0,0.08)", boxShadow: "none" },
           "@media (max-width:767px)": {
             padding: "6px 30px",
+            fontSize: "16px",
+            lineHeight: "20px",
           },
         },
       },
@@ -100,6 +104,7 @@ const theme = extendTheme({
           field: {
             borderColor: "#E9E9E9",
             borderRadius: "0",
+            color: "#4B4B4B",
             pr: "10",
             _focus: {
               borderColor: ["primary"],

@@ -226,11 +226,15 @@ button.chakra-button{height: auto; min-width: 0;}
 
 /* Dashboard
 --------------------------------------------------------------------------------------------------------*/
-.statistic-card{display: flex; align-items: center; padding: 30px; border-radius: 10px; border-width: 1px; border-style: solid; justify-content: space-between;height: 100%}
+.statistic-card{display: flex; align-items: center; padding: 30px; border-radius: 10px; border-width: 1px; border-style: solid; justify-content: space-between;height: 100%; transition: all 300ms ease;}
 .statistic-card.blue{background-color: #E6F4FF; border-color: #C0E3FF;}
+.statistic-card.blue:hover,.statistic-card.blue:focus{border-color: #299fff;}
 .statistic-card.pink{background-color: #F6EFFF; border-color: #E8D7FF;}
+.statistic-card.pink:hover,.statistic-card.pink:focus{border-color: #8229ff;}
 .statistic-card.orange{background-color: #FFF0E9; border-color: #FFDDCD;}
+.statistic-card.orange:hover,.statistic-card.orange:focus{border-color: #ff6d29;}
 .statistic-card.red{background-color: #FFE4E4; border-color: #FFCACA;}
+.statistic-card.red:hover,.statistic-card.red:focus{border-color: #ff2929;}
 .statistic-card h3{color: #000; padding-bottom: 16px; font-weight: 500;}
 .statistic-card p{color: #4B4B4B; }
 .statistic-card .img-block{ margin-left: 8px; width: 86px; height: 86px; border-radius: 50%; background-color: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;}
@@ -266,7 +270,7 @@ button.chakra-button{height: auto; min-width: 0;}
 --------------------------------------------------------------------------------------------------------*/
 .file-upload-main p {padding-bottom: 0;font-size: 15px;line-height: 20px;font-weight: 400;color: #9C9C9C;margin-left: 19px;}
 .file-upload-main .file-upload-wrapper{position: relative;}
-.file-upload-main {display: flex;align-items: center;margin-bottom: 36px;}
+.file-upload-main {display: flex;align-items: center;margin-bottom: 32px;}
 .file-upload-main h4 {padding-bottom: 0;margin-left: 8px;}
 .file-content {display: flex;align-items: center;justify-content: center;width: 124px;height: 39px;background-color: #F6F6F6; border-radius: 5px;cursor: pointer; color: #6D6D6D; position: relative;}
 .file-upload-main input {opacity: 0;position: absolute; left: 0; right: 0; top: 0; bottom: 0; cursor: pointer; z-index: 1;}

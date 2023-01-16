@@ -67,6 +67,7 @@ const theme = extendTheme({
                         borderColor: '#E9E9E9',
                         borderRadius: '0',
                         pr: '10',
+                        color: '#4B4B4B',
                         _focus: {
                             borderColor: ['primary'],
                             boxShadow: 'none',
@@ -155,10 +156,31 @@ const theme = extendTheme({
                 },
                 control: {
                     borderColor: '#9C9C9C',
+                    borderWidth: '2px',
+                    backgroundColor: '#FFFFFF',
+                    "&:before": {
+                        width: '8px',
+                        height: '8px',
+                    },
+                    _checked: {
+                        backgroundColor: '#FFFFFF',
+                        borderColor: 'primary',
+                        "&:before": {
+                            backgroundColor: 'primary',
+                            width: '8px',
+                            height: '8px',
+                        },
+                        _hover: {
+                            boxShadow: 'none',
+                            backgroundColor: '#FFFFFF',
+                            borderColor: 'primary'
+                        },
+                    },
                     _focus: {
                         boxShadow: 'none',
                         borderColor: 'primary'
                     },
+                   
                 }
             },
             defaultProps: {
@@ -231,7 +253,8 @@ const theme = extendTheme({
                     },
                     tabpanel: {
                         color: '#4B4B4B',
-                        p: '24px 0 0'
+                        p: '24px 0 0',
+                        lineHeight: '24px'
                     }
                 },
             },

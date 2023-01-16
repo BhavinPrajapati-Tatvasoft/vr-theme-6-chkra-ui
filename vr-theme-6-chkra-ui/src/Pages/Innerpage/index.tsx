@@ -1,7 +1,7 @@
 import * as React from 'react';
-import { Alert, AlertDescription, Box, Button, Card, Checkbox, CloseButton, Grid, GridItem, HStack, IconButton, Image, Input, InputGroup, InputRightElement, Radio, RadioGroup, Select, SimpleGrid, Tab, TabList, TabPanel, TabPanels, Tabs, Text, Textarea } from "@chakra-ui/react";
+import { Alert, AlertDescription, Box, Button, Card, Checkbox, CloseButton, Grid, GridItem, HStack, Icon, IconButton, Image, Input, InputGroup, InputRightElement, Radio, RadioGroup, Select, SimpleGrid, Tab, TabList, TabPanel, TabPanels, Tabs, Text, Textarea } from "@chakra-ui/react";
 import { Helmet } from "react-helmet";
-import { hidePasswordIcon, showPasswordIcon, uploadIcon, alertErrorIcon, alertInfoIcon, alertWarningIcon, alertSuccessIcon } from "../../assets/images";
+import { hidePasswordIcon, showPasswordIcon, uploadIcon, alertErrorIcon, alertInfoIcon, alertWarningIcon, alertSuccessIcon, checkboxCheckedIcon } from "../../assets/images";
 import Header from "../../Components/Header";
 import Sidebar from "../../Components/Sidebar";
 import gsap from "gsap";
@@ -13,6 +13,9 @@ const Innerpage = () => {
   //password input state
   const [show, setShow] = React.useState(false);
   const handleClick = () => setShow(!show);
+
+  const [showPassword, setShowPassword] = React.useState(false);
+  const handlePasswordClick = () => setShowPassword(!showPassword);
 
   //GSAP Animation
   useLayoutEffect(() => {
@@ -149,11 +152,11 @@ const Innerpage = () => {
                 <GridItem colSpan={{ base: 12, lg: 3, md: 6 }}>
                   <InputGroup>
                     <Input
-                      type={show ? 'text' : 'password'}
+                      type={showPassword ? 'text' : 'password'}
                       placeholder='Password'
                     />
                     <InputRightElement>
-                      <IconButton aria-label='Password Icon' onClick={handleClick} icon={<Image src={show ? showPasswordIcon : hidePasswordIcon} />} className='password-iconbutton' />
+                      <IconButton aria-label='Password Icon' onClick={handlePasswordClick} icon={<Image src={showPassword ? showPasswordIcon : hidePasswordIcon} />} className='password-iconbutton' />
                     </InputRightElement>
                   </InputGroup>
                 </GridItem>
@@ -184,7 +187,7 @@ const Innerpage = () => {
             <section className="secondary-section">
               <Text as="h5">Other Design elements</Text>
 
-              <Text as="h6">File Upload</Text>
+              <Text as="h6" pt='1'>File Upload</Text>
               <div className="file-upload-main">
                 <div className='file-upload-wrapper'>
                   <input
@@ -203,7 +206,7 @@ const Innerpage = () => {
 
               <Text as="h6">Check Box</Text>
               <div className="check-group">
-                <HStack spacing='24px'>
+                <HStack spacing='50px'>
                   <Checkbox defaultChecked>Selected</Checkbox>
                   <Checkbox>Not Yet Selected</Checkbox>
                 </HStack>
@@ -211,7 +214,7 @@ const Innerpage = () => {
 
               <Text as="h6">Radio Button</Text>
               <RadioGroup defaultValue='Selected' className='radio-group'>
-                <HStack spacing='24px'>
+                <HStack spacing='50px'>
                   <Radio value='Selected'>Selected</Radio>
                   <Radio value='Not Selected'>Not Yet Selected</Radio>
                 </HStack>

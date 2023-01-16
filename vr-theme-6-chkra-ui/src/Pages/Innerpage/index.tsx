@@ -352,8 +352,8 @@ const Innerpage = () => {
 
               <Text as="h6">CTA</Text>
               <HStack spacing="20px" className="btn-groups">
-                <Button variant="primary">Primary</Button>
-                <Button variant="outline">Secondary</Button>
+                <Button variant="primary" className="btn-primary">Primary</Button>
+                <Button variant="outline" className="btn-outline-primary">Secondary</Button>
               </HStack>
 
               <div className="secondary-section tab-wrapper">

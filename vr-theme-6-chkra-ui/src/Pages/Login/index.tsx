@@ -89,7 +89,7 @@ const Login = () => {
                   <Checkbox>Remember me</Checkbox>
                   <Link to="#" title='forgot password' className='custom-link'>Forgot password</Link>
                 </div>
-                <Button variant='primary' maxW='452px' w='100%' as={Link} to='/dashboard' className='btn-dark' title='Login'>Login</Button>
+                <Button variant='primary' maxW='452px' w='100%' as={Link} to='/dashboard' className='btn-primary' title='Login'>Login</Button>
                 <Text className='sign-up-link'>Don’t have an account? <Link to="#" title='Sign up'>Sign up</Link></Text>
               </form>
               <div className="other-links">

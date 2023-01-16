@@ -1,19 +1,33 @@
 import { extendTheme } from "@chakra-ui/react";
 
 const theme = extendTheme({
-    fonts: {
-        body: "Ubuntu, sans-serif",
-    },
-    colors: {
-        primary: "#59B997",
-        body: "#4B4B4B",
-        green: {
-            300: '#262626',
-            500: '#59B997',
-        }
+  fonts: {
+    body: "Ubuntu, sans-serif",
+  },
+  colors: {
+    primary: "#59B997",
+    body: "#4b4b4b",
+    green: {
+      300: "#262626",
+      500: "#59B997",
     },
     components: {
+        Text: {
+            baseStyle: {
+              color: "#4b4b4b",
+            },
+          },
         Button: {
+            baseStyle: {
+                height: "auto",
+                fontWeight: 400,
+                display: "flex",
+                outline: "none",
+                minWidth: "0",
+                _focus: {
+                  boxShadow: "none",
+                },
+              },
             variants: {
                 primary: {
                     bg: 'primary',
@@ -42,22 +56,8 @@ const theme = extendTheme({
                     _focus: { bg: 'rgba(0,0,0,0.08)', boxShadow: 'none' },
                 },
             },
-            defaultProps: {},
-        },
+          },
 
-        IconButton: {
-            baseStyle: {
-                fontWeight: 'bold',
-                variant: 'ghost',
-                color: '#fff',
-            },
-            defaultProps: {
-                size: 'md',
-                variant: 'ghost',
-                colorScheme: 'red',
-
-            },
-        },
         Input: {
             variants: {
                 flushed: {
@@ -217,9 +217,7 @@ const theme = extendTheme({
             },
         },
         Table: {
-            baseStyle: {
-                // fontWeight: 'bold',
-            },
+            baseStyle: {},
             sizes: {},
             variants: {
                 simple: {
@@ -231,6 +229,7 @@ const theme = extendTheme({
                 variant: 'simple',
             },
         },
-    }
-})
+      },
+    },
+});
 export default theme;

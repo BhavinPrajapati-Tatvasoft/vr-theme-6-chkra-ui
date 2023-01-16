@@ -1,7 +1,43 @@
-import * as React from 'react';
-import { Alert, AlertDescription, Box, Button, Card, Checkbox, CloseButton, Grid, GridItem, HStack, IconButton, Image, Input, InputGroup, InputRightElement, Radio, RadioGroup, Select, SimpleGrid, Tab, TabList, TabPanel, TabPanels, Tabs, Text, Textarea } from "@chakra-ui/react";
+import * as React from "react";
+import {
+  Alert,
+  AlertDescription,
+  Box,
+  Button,
+  Card,
+  Checkbox,
+  CloseButton,
+  Grid,
+  GridItem,
+  HStack,
+  IconButton,
+  Image,
+  Input,
+  InputGroup,
+  InputRightElement,
+  Radio,
+  RadioGroup,
+  Select,
+  SimpleGrid,
+  Tab,
+  TabList,
+  TabPanel,
+  TabPanels,
+  Tabs,
+  Text,
+  Textarea,
+} from "@chakra-ui/react";
 import { Helmet } from "react-helmet";
-import { hidePasswordIcon, showPasswordIcon, uploadIcon, alertErrorIcon, alertInfoIcon, alertWarningIcon, alertSuccessIcon } from "../../assets/images";
+import {
+  hidePasswordIcon,
+  showPasswordIcon,
+  uploadIcon,
+  alertErrorIcon,
+  alertInfoIcon,
+  alertWarningIcon,
+  alertSuccessIcon,
+  arrowDownIcon,
+} from "../../assets/images";
 import Header from "../../Components/Header";
 import Sidebar from "../../Components/Sidebar";
 import gsap from "gsap";
@@ -9,7 +45,6 @@ import gsap from "gsap";
 const { useLayoutEffect } = React;
 
 const Innerpage = () => {
-
   //password input state
   const [show, setShow] = React.useState(false);
   const handleClick = () => setShow(!show);
@@ -17,8 +52,16 @@ const Innerpage = () => {
   //GSAP Animation
   useLayoutEffect(() => {
     let pageText = gsap.timeline();
-    pageText.fromTo(".page-title", { y: "-40px", opacity: 0 }, { y: 0, opacity: 1, duration: 1 });
-    pageText.fromTo("h5", { y: "20px", opacity: 0 }, { y: 0, opacity: 1, stagger: 0.3 });
+    pageText.fromTo(
+      ".page-title",
+      { y: "-40px", opacity: 0 },
+      { y: 0, opacity: 1, duration: 1 }
+    );
+    pageText.fromTo(
+      "h5",
+      { y: "20px", opacity: 0 },
+      { y: 0, opacity: 1, stagger: 0.3 }
+    );
   }, []);
 
   return (
@@ -30,68 +73,75 @@ const Innerpage = () => {
         <Header />
         <Sidebar />
         <section className="main-content inner">
-          <Text as="h3" className="page-title">Users</Text>
-          <Card className='custom-card'>
-
+          <Text as="h3" className="page-title">
+            Users
+          </Text>
+          <Card className="custom-card">
             {/* -------- first column start ---------  */}
             <Text as="h5">One Column</Text>
-            <InputGroup >
-              <Input
-                type='text'
-                placeholder='Username'
-              />
+            <InputGroup>
+              <Input type="text" placeholder="Username" />
             </InputGroup>
             <InputGroup>
-              <Select placeholder='Dropdown'>
-                <option value='option1'>Option 1</option>
-                <option value='option2'>Option 2</option>
-                <option value='option3'>Option 3</option>
+              <Select
+                placeholder="Dropdown"
+                icon={<Image src={arrowDownIcon} alt="Arrow Down" />}
+              >
+                <option value="option1">Option 1</option>
+                <option value="option2">Option 2</option>
+                <option value="option3">Option 3</option>
               </Select>
             </InputGroup>
-            <Textarea placeholder='Multiple  line' rows={4} />
-
+            <Textarea placeholder="Multiple  line" rows={4} />
 
             {/* -------- Two column start ---------  */}
             <section className="secondary-section">
               <Text as="h5">Two Column</Text>
-              <Grid templateColumns='repeat(6, 1fr)' columnGap={{ base: '16px', md: '30px' }} rowGap='10px'>
-                <GridItem colSpan={{ base: 12, md: 3, }}>
-                  <InputGroup >
-                    <Input
-                      type='text'
-                      placeholder='Username'
-                    />
+              <Grid
+                templateColumns="repeat(6, 1fr)"
+                columnGap={{ base: "16px", md: "30px" }}
+                rowGap="10px"
+              >
+                <GridItem colSpan={{ base: 12, md: 3 }}>
+                  <InputGroup>
+                    <Input type="text" placeholder="Username" />
                   </InputGroup>
                 </GridItem>
 
-                <GridItem colSpan={{ base: 12, md: 3, }}>
+                <GridItem colSpan={{ base: 12, md: 3 }}>
                   <InputGroup>
                     <Input
-                      type={show ? 'text' : 'password'}
-                      placeholder='Password'
+                      type={show ? "text" : "password"}
+                      placeholder="Password"
                     />
                     <InputRightElement>
-                      <IconButton aria-label='Password Icon' onClick={handleClick} icon={<Image src={show ? showPasswordIcon : hidePasswordIcon} />} className='password-iconbutton' />
+                      <IconButton
+                        aria-label="Password Icon"
+                        onClick={handleClick}
+                        icon={
+                          <Image
+                            src={show ? showPasswordIcon : hidePasswordIcon}
+                          />
+                        }
+                        className="password-iconbutton"
+                      />
                     </InputRightElement>
                   </InputGroup>
                 </GridItem>
 
-                <GridItem colSpan={{ base: 12, md: 3, }}>
-                  <InputGroup >
-                    <Input
-                      type='text'
-                      placeholder='Name'
-                    />
+                <GridItem colSpan={{ base: 12, md: 3 }}>
+                  <InputGroup>
+                    <Input type="text" placeholder="Name" />
                   </InputGroup>
                 </GridItem>
 
-                <GridItem colSpan={{ base: 12, md: 3, }}>
-                  <InputGroup >
+                <GridItem colSpan={{ base: 12, md: 3 }}>
+                  <InputGroup>
                     <Input
-                      type='text'
-                      placeholder='Error'
+                      type="text"
+                      placeholder="Error"
                       isInvalid
-                      focusBorderColor='blue'
+                      focusBorderColor="blue"
                     />
                   </InputGroup>
                 </GridItem>
@@ -101,32 +151,32 @@ const Innerpage = () => {
             {/* -------- Three column start ---------  */}
             <section className="secondary-section">
               <Text as="h5">Three Column</Text>
-              <Grid templateColumns='repeat(12, 1fr)' columnGap={{ base: '16px', md: '30px' }} rowGap='10px'>
+              <Grid
+                templateColumns="repeat(12, 1fr)"
+                columnGap={{ base: "16px", md: "30px" }}
+                rowGap="10px"
+              >
                 <GridItem colSpan={{ base: 12, lg: 4, md: 6 }}>
-                  <InputGroup >
-                    <Input
-                      type='text'
-                      placeholder='Focus'
-                    />
-                  </InputGroup>
-                </GridItem>
-
-                <GridItem colSpan={{ base: 12, lg: 4, md: 6 }}>
-                  <InputGroup >
-                    <Input
-                      type='text'
-                      placeholder='Disabled'
-                      disabled
-                    />
+                  <InputGroup>
+                    <Input type="text" placeholder="Focus" />
                   </InputGroup>
                 </GridItem>
 
                 <GridItem colSpan={{ base: 12, lg: 4, md: 6 }}>
                   <InputGroup>
-                    <Select placeholder='Dropdown'>
-                      <option value='option1'>Option 1</option>
-                      <option value='option2'>Option 2</option>
-                      <option value='option3'>Option 3</option>
+                    <Input type="text" placeholder="Disabled" disabled />
+                  </InputGroup>
+                </GridItem>
+
+                <GridItem colSpan={{ base: 12, lg: 4, md: 6 }}>
+                  <InputGroup>
+                    <Select
+                      placeholder="Dropdown"
+                      icon={<Image src={arrowDownIcon} alt="Arrow Down" />}
+                    >
+                      <option value="option1">Option 1</option>
+                      <option value="option2">Option 2</option>
+                      <option value="option3">Option 3</option>
                     </Select>
                   </InputGroup>
                 </GridItem>
@@ -136,45 +186,54 @@ const Innerpage = () => {
             {/* -------- Four column start ---------  */}
             <section className="secondary-section">
               <Text as="h5">Four Column</Text>
-              <Grid templateColumns='repeat(12, 1fr)' columnGap={{ base: '16px', md: '30px' }} rowGap='10px'>
+              <Grid
+                templateColumns="repeat(12, 1fr)"
+                columnGap={{ base: "16px", md: "30px" }}
+                rowGap="10px"
+              >
                 <GridItem colSpan={{ base: 12, lg: 3, md: 6 }}>
-                  <InputGroup >
-                    <Input
-                      type='text'
-                      placeholder='Username'
-                    />
+                  <InputGroup>
+                    <Input type="text" placeholder="Username" />
                   </InputGroup>
                 </GridItem>
 
                 <GridItem colSpan={{ base: 12, lg: 3, md: 6 }}>
                   <InputGroup>
                     <Input
-                      type={show ? 'text' : 'password'}
-                      placeholder='Password'
+                      type={show ? "text" : "password"}
+                      placeholder="Password"
                     />
                     <InputRightElement>
-                      <IconButton aria-label='Password Icon' onClick={handleClick} icon={<Image src={show ? showPasswordIcon : hidePasswordIcon} />} className='password-iconbutton' />
+                      <IconButton
+                        aria-label="Password Icon"
+                        onClick={handleClick}
+                        icon={
+                          <Image
+                            src={show ? showPasswordIcon : hidePasswordIcon}
+                          />
+                        }
+                        className="password-iconbutton"
+                      />
                     </InputRightElement>
                   </InputGroup>
                 </GridItem>
 
                 <GridItem colSpan={{ base: 12, lg: 3, md: 6 }}>
                   <InputGroup>
-                    <Select placeholder='Dropdown'>
-                      <option value='option1'>Option 1</option>
-                      <option value='option2'>Option 2</option>
-                      <option value='option3'>Option 3</option>
+                    <Select
+                      placeholder="Dropdown"
+                      icon={<Image src={arrowDownIcon} alt="Arrow Down" />}
+                    >
+                      <option value="option1">Option 1</option>
+                      <option value="option2">Option 2</option>
+                      <option value="option3">Option 3</option>
                     </Select>
                   </InputGroup>
                 </GridItem>
 
                 <GridItem colSpan={{ base: 12, lg: 3, md: 6 }}>
-                  <InputGroup >
-                    <Input
-                      type='text'
-                      placeholder='Error'
-                      isInvalid
-                    />
+                  <InputGroup>
+                    <Input type="text" placeholder="Error" isInvalid />
                   </InputGroup>
                 </GridItem>
               </Grid>
@@ -186,7 +245,7 @@ const Innerpage = () => {
 
               <Text as="h6">File Upload</Text>
               <div className="file-upload-main">
-                <div className='file-upload-wrapper'>
+                <div className="file-upload-wrapper">
                   <input
                     type="file"
                     name="Upload"
@@ -203,23 +262,27 @@ const Innerpage = () => {
 
               <Text as="h6">Check Box</Text>
               <div className="check-group">
-                <HStack spacing='24px'>
+                <HStack spacing="24px">
                   <Checkbox defaultChecked>Selected</Checkbox>
                   <Checkbox>Not Yet Selected</Checkbox>
                 </HStack>
               </div>
 
               <Text as="h6">Radio Button</Text>
-              <RadioGroup defaultValue='Selected' className='radio-group'>
-                <HStack spacing='24px'>
-                  <Radio value='Selected'>Selected</Radio>
-                  <Radio value='Not Selected'>Not Yet Selected</Radio>
+              <RadioGroup defaultValue="Selected" className="radio-group">
+                <HStack spacing="24px">
+                  <Radio value="Selected">Selected</Radio>
+                  <Radio value="Not Selected">Not Yet Selected</Radio>
                 </HStack>
               </RadioGroup>
 
               <Text as="h6">Snack Bar</Text>
-              <SimpleGrid gap={6} columns={{ base: 1, lg: 2 }} className='snackbar-group'>
-                <Alert status='error' className='alert-error'>
+              <SimpleGrid
+                gap={6}
+                columns={{ base: 1, lg: 2 }}
+                className="snackbar-group"
+              >
+                <Alert status="error" className="alert-error">
                   <Image src={alertErrorIcon} />
                   <Box>
                     <AlertDescription>
@@ -227,14 +290,14 @@ const Innerpage = () => {
                     </AlertDescription>
                   </Box>
                   <CloseButton
-                    alignSelf='flex-start'
-                    position='relative'
+                    alignSelf="flex-start"
+                    position="relative"
                     right={-1}
-                    ml='auto'
+                    ml="auto"
                   />
                 </Alert>
 
-                <Alert status='info' className='alert-info'>
+                <Alert status="info" className="alert-info">
                   <Image src={alertInfoIcon} />
                   <Box>
                     <AlertDescription>
@@ -242,13 +305,13 @@ const Innerpage = () => {
                     </AlertDescription>
                   </Box>
                   <CloseButton
-                    alignSelf='flex-start'
-                    position='relative'
+                    alignSelf="flex-start"
+                    position="relative"
                     right={-1}
-                    ml='auto'
+                    ml="auto"
                   />
                 </Alert>
-                <Alert status='warning' className='alert-warning'>
+                <Alert status="warning" className="alert-warning">
                   <Image src={alertWarningIcon} />
                   <Box>
                     <AlertDescription>
@@ -256,13 +319,13 @@ const Innerpage = () => {
                     </AlertDescription>
                   </Box>
                   <CloseButton
-                    alignSelf='flex-start'
-                    position='relative'
+                    alignSelf="flex-start"
+                    position="relative"
                     right={-1}
-                    ml='auto'
+                    ml="auto"
                   />
                 </Alert>
-                <Alert status='success' className='alert-success'>
+                <Alert status="success" className="alert-success">
                   <Image src={alertSuccessIcon} />
                   <Box>
                     <AlertDescription>
@@ -270,19 +333,18 @@ const Innerpage = () => {
                     </AlertDescription>
                   </Box>
                   <CloseButton
-                    alignSelf='flex-start'
-                    position='relative'
+                    alignSelf="flex-start"
+                    position="relative"
                     right={-1}
-                    ml='auto'
+                    ml="auto"
                   />
                 </Alert>
-
               </SimpleGrid>
 
               <Text as="h6">CTA</Text>
-              <HStack spacing='20px' className='btn-groups'>
-                <Button variant='primary'>Primary</Button>
-                <Button variant='outline'>Secondary</Button>
+              <HStack spacing="20px" className="btn-groups">
+                <Button variant="primary">Primary</Button>
+                <Button variant="outline">Secondary</Button>
               </HStack>
 
               <div className="secondary-section tab-wrapper">
@@ -297,30 +359,36 @@ const Innerpage = () => {
 
                   <TabPanels>
                     <TabPanel>
-                      It is a long established fact that a reader will be distracted
-                      by the readable content of a page when looking at its layout. The point
-                      of using Lorem Ipsum is that it has a more-or-less normal distribution of
-                      letters, as opposed to using 'Content here, content here', making it look like
-                      readable English. Many desktop publishing packages and
-                      web page editors now use Lorem Ipsum as their default model text, and a search
-                      for 'lorem ipsum' will uncover many web sites still in their infancy.
+                      It is a long established fact that a reader will be
+                      distracted by the readable content of a page when looking
+                      at its layout. The point of using Lorem Ipsum is that it
+                      has a more-or-less normal distribution of letters, as
+                      opposed to using 'Content here, content here', making it
+                      look like readable English. Many desktop publishing
+                      packages and web page editors now use Lorem Ipsum as their
+                      default model text, and a search for 'lorem ipsum' will
+                      uncover many web sites still in their infancy.
                     </TabPanel>
                     <TabPanel>
-                      Many desktop publishing packages and
-                      web page editors now use Lorem Ipsum as their default model text, and a search
-                      for 'lorem ipsum' will uncover many web sites still in their infancy.
+                      Many desktop publishing packages and web page editors now
+                      use Lorem Ipsum as their default model text, and a search
+                      for 'lorem ipsum' will uncover many web sites still in
+                      their infancy.
                     </TabPanel>
                     <TabPanel>
-                      It is a long established fact that a reader will be distracted
-                      by the readable content of a page when looking at its layout. The point
-                      of using Lorem Ipsum is that it has a more-or-less normal distribution of
-                      letters, as opposed to using 'Content here, content here', making it look like
-                      readable English. Many desktop publishing packages and
-                      web page editors now use Lorem Ipsum as their default model text, and a search
-                      for 'lorem ipsum' will uncover many web sites still in their infancy.
+                      It is a long established fact that a reader will be
+                      distracted by the readable content of a page when looking
+                      at its layout. The point of using Lorem Ipsum is that it
+                      has a more-or-less normal distribution of letters, as
+                      opposed to using 'Content here, content here', making it
+                      look like readable English. Many desktop publishing
+                      packages and web page editors now use Lorem Ipsum as their
+                      default model text, and a search for 'lorem ipsum' will
+                      uncover many web sites still in their infancy.
                     </TabPanel>
                     <TabPanel>
-                      It is a long established fact that a reader will be distracted.
+                      It is a long established fact that a reader will be
+                      distracted.
                     </TabPanel>
                   </TabPanels>
                 </Tabs>

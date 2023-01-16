@@ -103,10 +103,10 @@ textarea { -webkit-appearance: none; appearance: none;}
 :-ms-input-placeholder {color: #000;}
 :-moz-placeholder {color: #000;}
 
-.header .chakra-input::-webkit-input-placeholder {color: #9C9C9C;}
-.header .chakra-input::-moz-placeholder {color: #9C9C9C;}
-.header .chakra-input:-ms-input-placeholder {color: #9C9C9C;}
-.header .chakra-input:-moz-placeholder {color: #9C9C9C;}
+.chakra-input::-webkit-input-placeholder {color: #9C9C9C;}
+.chakra-input::-moz-placeholder {color: #9C9C9C;}
+.chakra-input:-ms-input-placeholder {color: #9C9C9C;}
+.chakra-input:-moz-placeholder {color: #9C9C9C;}
 
 ::-moz-focus-inner {border: 0;}
 select:-moz-focusring {color: transparent;text-shadow: 0 0 0 #000;}
@@ -281,6 +281,7 @@ button.chakra-button{height: auto; min-width: 0;}
 .secondary-section {padding-top: 30px;}
 .btn-groups{padding-bottom: 20px;}
 
+/* .chakra-select__icon{background-image: url(./assets/images/bar-chart-icon.svg); } */
 /* Responsive Media Query
 --------------------------------------------------------------------------------------------------------*/
 @media (max-width:1399px) {

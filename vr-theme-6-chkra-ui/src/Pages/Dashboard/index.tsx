@@ -1,29 +1,73 @@
-import * as React from 'react';
-import { Card, Grid, GridItem, IconButton, Image, Menu, MenuButton, MenuItem, MenuList, Progress, Table, TableContainer, Tbody, Td, Text, Th, Thead, Tr } from "@chakra-ui/react";
+import * as React from "react";
+import {
+  Card,
+  Grid,
+  GridItem,
+  IconButton,
+  Image,
+  Menu,
+  MenuButton,
+  MenuItem,
+  MenuList,
+  Progress,
+  Table,
+  TableContainer,
+  Tbody,
+  Td,
+  Text,
+  Th,
+  Thead,
+  Tr,
+} from "@chakra-ui/react";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
-import { barChartIcon, keyIcon, moneyCoinIcon, threeDots, user1, user2, user3, user4, walletIcon, worldMap } from "../../assets/images";
+import {
+  barChartIcon,
+  keyIcon,
+  moneyCoinIcon,
+  threeDots,
+  user1,
+  user2,
+  user3,
+  user4,
+  walletIcon,
+  worldMap,
+} from "../../assets/images";
 import Header from "../../Components/Header";
 import Sidebar from "../../Components/Sidebar";
 import CountUp from "react-countup";
 import WeeklyReport from "../../Components/Charts/weeklyReport";
-import { useRef } from 'react';
-import gsap from 'gsap';
+import { useRef } from "react";
+import gsap from "gsap";
 const { useLayoutEffect } = React;
 
 const Dashboard: React.FC = () => {
-
   //GSAP Animation
   const progressTimelineMain = useRef(null);
   useLayoutEffect(() => {
-      let statisticsSvg = gsap.timeline();
-      statisticsSvg.fromTo(".statistic-card .img-block img", { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 1 });
+    let statisticsSvg = gsap.timeline();
+    statisticsSvg.fromTo(
+      ".statistic-card .img-block img",
+      { scale: 0, opacity: 0 },
+      { scale: 1, opacity: 1, duration: 1 }
+    );
 
-      let pageText = gsap.timeline();
-      pageText.fromTo(".page-title", { y: "-40px", opacity: 0 }, { y: 0, opacity: 1, duration: 1 });
-      pageText.fromTo(".data-info", { y: "20px", opacity: 0 }, { y: 0, opacity: 1, stagger: 0.3 });
-      pageText.fromTo("h5", { y: "20px", opacity: 0 }, { y: 0, opacity: 1, stagger: 0.3 });
-
+    let pageText = gsap.timeline();
+    pageText.fromTo(
+      ".page-title",
+      { y: "-40px", opacity: 0 },
+      { y: 0, opacity: 1, duration: 1 }
+    );
+    pageText.fromTo(
+      ".data-info",
+      { y: "20px", opacity: 0 },
+      { y: 0, opacity: 1, stagger: 0.3 }
+    );
+    pageText.fromTo(
+      "h5",
+      { y: "20px", opacity: 0 },
+      { y: 0, opacity: 1, stagger: 0.3 }
+    );
   }, []);
 
   return (
@@ -36,13 +80,18 @@ const Dashboard: React.FC = () => {
         <Sidebar />
         {/* Main content Start */}
         <div className="main-content">
-          <Text as="h3" className="page-title">Dashboard</Text>
-          <Grid templateColumns='repeat(12, 1fr)' gap={{base: '16px', lg: '30px'}}>
+          <Text as="h3" className="page-title">
+            Dashboard
+          </Text>
+          <Grid
+            templateColumns="repeat(12, 1fr)"
+            gap={{ base: "16px", lg: "20px", xl: "30px" }}
+          >
             {/* Statistics Cards Start */}
-            <GridItem colSpan={{ base: 12, xl: 3, md: 6 }}>
+            <GridItem colSpan={{ base: 12, xl: 3, sm: 6 }}>
               <a href="#" title="Property Sold" className="statistic-card blue">
                 <div>
-                  <Text as='h3'>
+                  <Text as="h3">
                     <CountUp end={6387} />
                   </Text>
                   <p className="data-info">Property Sold</p>
@@ -52,10 +101,10 @@ const Dashboard: React.FC = () => {
                 </div>
               </a>
             </GridItem>
-            <GridItem colSpan={{ base: 12, xl: 3, md: 6 }}>
+            <GridItem colSpan={{ base: 12, xl: 3, sm: 6 }}>
               <a href="#" title="Income" className="statistic-card pink">
                 <div>
-                  <Text as='h3'>
+                  <Text as="h3">
                     <CountUp end={9712} prefix="$" separator="," />
                   </Text>
                   <p className="data-info">Income</p>
@@ -65,10 +114,10 @@ const Dashboard: React.FC = () => {
                 </div>
               </a>
             </GridItem>
-            <GridItem colSpan={{ base: 12, xl: 3, md: 6 }}>
+            <GridItem colSpan={{ base: 12, xl: 3, sm: 6 }}>
               <a href="#" title="Expense" className="statistic-card orange">
                 <div>
-                  <Text as='h3'>
+                  <Text as="h3">
                     <CountUp end={965} />
                   </Text>
                   <p className="data-info">Expense</p>
@@ -78,14 +127,14 @@ const Dashboard: React.FC = () => {
                 </div>
               </a>
             </GridItem>
-            <GridItem colSpan={{ base: 12, xl: 3, md: 6 }}>
+            <GridItem colSpan={{ base: 12, xl: 3, sm: 6 }}>
               <a
                 href="#"
                 title="Property Rented"
                 className="statistic-card red"
               >
                 <div>
-                  <Text as='h3'>
+                  <Text as="h3">
                     <CountUp end={8723} prefix="$" separator="," />
                   </Text>
                   <p className="data-info">Property Rented</p>
@@ -98,10 +147,10 @@ const Dashboard: React.FC = () => {
             {/* Statistics Cards End */}
 
             {/* Weekly Report Card Start */}
-            <GridItem colSpan={{ base: 12, lg: 7 }}>
+            <GridItem colSpan={{ base: 12, xl: 7 }}>
               <Card className="custom-card weekly-report-card">
                 <div className="card-heading">
-                  <Text as='h5'>Weekly Report</Text>
+                  <Text as="h5">Weekly Report</Text>
                   <div className="graph-notation">
                     <p>This week</p>
                     <p>last week</p>
@@ -113,10 +162,10 @@ const Dashboard: React.FC = () => {
             {/* Weekly Report Card End */}
 
             {/* Transaction Card Start */}
-            <GridItem colSpan={{ base: 12, lg: 5 }}>
+            <GridItem colSpan={{ base: 12, xl: 5 }}>
               <Card className="custom-card transaction-card">
                 <div className="card-heading">
-                  <Text as='h5'>Transaction</Text>
+                  <Text as="h5">Transaction</Text>
                   <a href="#" title="View more" className="header-link">
                     View more
                   </a>
@@ -192,10 +241,10 @@ const Dashboard: React.FC = () => {
             {/* Transaction Card End */}
 
             {/* Table Start */}
-            <GridItem colSpan={{ base: 12, lg: 7 }}>
+            <GridItem colSpan={{ base: 12, xl: 7 }}>
               <Card className="custom-card">
                 <div className="card-heading">
-                  <Text as='h5'>Table</Text>
+                  <Text as="h5">Table</Text>
                   <a href="#" title="View more" className="header-link">
                     View more
                   </a>
@@ -219,21 +268,15 @@ const Dashboard: React.FC = () => {
                           <Menu>
                             <MenuButton
                               as={IconButton}
-                              aria-label='Options'
+                              aria-label="Options"
                               icon={<Image src={threeDots} />}
-                              variant='outline'
+                              variant="outline"
                               className="custom-table-menu"
                             />
                             <MenuList>
-                              <MenuItem >
-                                New Row
-                              </MenuItem>
-                              <MenuItem >
-                                New Data
-                              </MenuItem>
-                              <MenuItem >
-                                Delete Log
-                              </MenuItem>
+                              <MenuItem>New Row</MenuItem>
+                              <MenuItem>New Data</MenuItem>
+                              <MenuItem>Delete Log</MenuItem>
                             </MenuList>
                           </Menu>
                         </Td>
@@ -246,21 +289,15 @@ const Dashboard: React.FC = () => {
                           <Menu>
                             <MenuButton
                               as={IconButton}
-                              aria-label='Options'
+                              aria-label="Options"
                               icon={<Image src={threeDots} />}
-                              variant='outline'
+                              variant="outline"
                               className="custom-table-menu"
                             />
                             <MenuList>
-                              <MenuItem >
-                                New Row
-                              </MenuItem>
-                              <MenuItem >
-                                New Data
-                              </MenuItem>
-                              <MenuItem >
-                                Delete Log
-                              </MenuItem>
+                              <MenuItem>New Row</MenuItem>
+                              <MenuItem>New Data</MenuItem>
+                              <MenuItem>Delete Log</MenuItem>
                             </MenuList>
                           </Menu>
                         </Td>
@@ -273,21 +310,15 @@ const Dashboard: React.FC = () => {
                           <Menu>
                             <MenuButton
                               as={IconButton}
-                              aria-label='Options'
+                              aria-label="Options"
                               icon={<Image src={threeDots} />}
-                              variant='outline'
+                              variant="outline"
                               className="custom-table-menu"
                             />
                             <MenuList>
-                              <MenuItem >
-                                New Row
-                              </MenuItem>
-                              <MenuItem >
-                                New Data
-                              </MenuItem>
-                              <MenuItem >
-                                Delete Log
-                              </MenuItem>
+                              <MenuItem>New Row</MenuItem>
+                              <MenuItem>New Data</MenuItem>
+                              <MenuItem>Delete Log</MenuItem>
                             </MenuList>
                           </Menu>
                         </Td>
@@ -300,21 +331,15 @@ const Dashboard: React.FC = () => {
                           <Menu>
                             <MenuButton
                               as={IconButton}
-                              aria-label='Options'
+                              aria-label="Options"
                               icon={<Image src={threeDots} />}
-                              variant='outline'
+                              variant="outline"
                               className="custom-table-menu"
                             />
                             <MenuList>
-                              <MenuItem >
-                                New Row
-                              </MenuItem>
-                              <MenuItem >
-                                New Data
-                              </MenuItem>
-                              <MenuItem >
-                                Delete Log
-                              </MenuItem>
+                              <MenuItem>New Row</MenuItem>
+                              <MenuItem>New Data</MenuItem>
+                              <MenuItem>Delete Log</MenuItem>
                             </MenuList>
                           </Menu>
                         </Td>
@@ -327,21 +352,15 @@ const Dashboard: React.FC = () => {
                           <Menu>
                             <MenuButton
                               as={IconButton}
-                              aria-label='Options'
+                              aria-label="Options"
                               icon={<Image src={threeDots} />}
-                              variant='outline'
+                              variant="outline"
                               className="custom-table-menu"
                             />
                             <MenuList>
-                              <MenuItem >
-                                New Row
-                              </MenuItem>
-                              <MenuItem >
-                                New Data
-                              </MenuItem>
-                              <MenuItem >
-                                Delete Log
-                              </MenuItem>
+                              <MenuItem>New Row</MenuItem>
+                              <MenuItem>New Data</MenuItem>
+                              <MenuItem>Delete Log</MenuItem>
                             </MenuList>
                           </Menu>
                         </Td>
@@ -354,21 +373,15 @@ const Dashboard: React.FC = () => {
                           <Menu>
                             <MenuButton
                               as={IconButton}
-                              aria-label='Options'
+                              aria-label="Options"
                               icon={<Image src={threeDots} />}
-                              variant='outline'
+                              variant="outline"
                               className="custom-table-menu"
                             />
                             <MenuList>
-                              <MenuItem >
-                                New Row
-                              </MenuItem>
-                              <MenuItem >
-                                New Data
-                              </MenuItem>
-                              <MenuItem >
-                                Delete Log
-                              </MenuItem>
+                              <MenuItem>New Row</MenuItem>
+                              <MenuItem>New Data</MenuItem>
+                              <MenuItem>Delete Log</MenuItem>
                             </MenuList>
                           </Menu>
                         </Td>
@@ -381,21 +394,15 @@ const Dashboard: React.FC = () => {
                           <Menu>
                             <MenuButton
                               as={IconButton}
-                              aria-label='Options'
+                              aria-label="Options"
                               icon={<Image src={threeDots} />}
-                              variant='outline'
+                              variant="outline"
                               className="custom-table-menu"
                             />
                             <MenuList>
-                              <MenuItem >
-                                New Row
-                              </MenuItem>
-                              <MenuItem >
-                                New Data
-                              </MenuItem>
-                              <MenuItem >
-                                Delete Log
-                              </MenuItem>
+                              <MenuItem>New Row</MenuItem>
+                              <MenuItem>New Data</MenuItem>
+                              <MenuItem>Delete Log</MenuItem>
                             </MenuList>
                           </Menu>
                         </Td>
@@ -408,21 +415,15 @@ const Dashboard: React.FC = () => {
                           <Menu>
                             <MenuButton
                               as={IconButton}
-                              aria-label='Options'
+                              aria-label="Options"
                               icon={<Image src={threeDots} />}
-                              variant='outline'
+                              variant="outline"
                               className="custom-table-menu"
                             />
                             <MenuList>
-                              <MenuItem >
-                                New Row
-                              </MenuItem>
-                              <MenuItem >
-                                New Data
-                              </MenuItem>
-                              <MenuItem >
-                                Delete Log
-                              </MenuItem>
+                              <MenuItem>New Row</MenuItem>
+                              <MenuItem>New Data</MenuItem>
+                              <MenuItem>Delete Log</MenuItem>
                             </MenuList>
                           </Menu>
                         </Td>
@@ -435,21 +436,15 @@ const Dashboard: React.FC = () => {
                           <Menu>
                             <MenuButton
                               as={IconButton}
-                              aria-label='Options'
+                              aria-label="Options"
                               icon={<Image src={threeDots} />}
-                              variant='outline'
+                              variant="outline"
                               className="custom-table-menu"
                             />
                             <MenuList>
-                              <MenuItem >
-                                New Row
-                              </MenuItem>
-                              <MenuItem >
-                                New Data
-                              </MenuItem>
-                              <MenuItem >
-                                Delete Log
-                              </MenuItem>
+                              <MenuItem>New Row</MenuItem>
+                              <MenuItem>New Data</MenuItem>
+                              <MenuItem>Delete Log</MenuItem>
                             </MenuList>
                           </Menu>
                         </Td>
@@ -462,21 +457,15 @@ const Dashboard: React.FC = () => {
                           <Menu>
                             <MenuButton
                               as={IconButton}
-                              aria-label='Options'
+                              aria-label="Options"
                               icon={<Image src={threeDots} />}
-                              variant='outline'
+                              variant="outline"
                               className="custom-table-menu"
                             />
                             <MenuList>
-                              <MenuItem >
-                                New Row
-                              </MenuItem>
-                              <MenuItem >
-                                New Data
-                              </MenuItem>
-                              <MenuItem >
-                                Delete Log
-                              </MenuItem>
+                              <MenuItem>New Row</MenuItem>
+                              <MenuItem>New Data</MenuItem>
+                              <MenuItem>Delete Log</MenuItem>
                             </MenuList>
                           </Menu>
                         </Td>
@@ -489,10 +478,10 @@ const Dashboard: React.FC = () => {
             {/* Table End */}
 
             {/* Sales by Locations Card Start */}
-            <GridItem colSpan={{ base: 12, lg: 5 }}>
+            <GridItem colSpan={{ base: 12, xl: 5 }}>
               <Card className="custom-card">
                 <div className="card-heading">
-                  <Text as='h5'>Sales by Locations</Text>
+                  <Text as="h5">Sales by Locations</Text>
                   <a href="#" title="View more" className="header-link">
                     View more
                   </a>
@@ -516,7 +505,7 @@ const Dashboard: React.FC = () => {
                         )}
                       </CountUp>
                     </span>
-                    <Progress colorScheme='green' size='sm' value={75} />
+                    <Progress colorScheme="green" size="sm" value={75} />
                   </li>
                   <li>
                     <span className="city-info">
@@ -534,8 +523,7 @@ const Dashboard: React.FC = () => {
                         )}
                       </CountUp>
                     </span>
-                    <Progress colorScheme='green' size='sm' value={86} />
-
+                    <Progress colorScheme="green" size="sm" value={86} />
                   </li>
                   <li>
                     <span className="city-info">
@@ -553,19 +541,15 @@ const Dashboard: React.FC = () => {
                         )}
                       </CountUp>
                     </span>
-                    <Progress colorScheme='green' size='sm' value={62} />
-
+                    <Progress colorScheme="green" size="sm" value={62} />
                   </li>
                 </ul>
               </Card>
             </GridItem>
             {/* Sales by Locations Card End */}
-
           </Grid>
-
         </div>
         {/* Main content End */}
-
       </div>
     </>
   );

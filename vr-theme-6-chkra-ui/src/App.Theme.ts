@@ -94,7 +94,7 @@ const theme = extendTheme({
           field: {
             borderColor: "#E9E9E9",
             borderRadius: "0",
-            px: "2",
+            pr: "10",
             _focus: {
               borderColor: ["primary"],
               boxShadow: "none",
@@ -114,7 +114,7 @@ const theme = extendTheme({
         flushed: {
           borderColor: "#E9E9E9",
           borderRadius: "0",
-          px: "2",
+          pr: "10",
           mb: "30px",
           _focus: {
             borderColor: ["primary"],
@@ -305,6 +305,7 @@ const theme = extendTheme({
       baseStyle: {
         item: {
           color: "#4B4B4B",
+          padding: "8px 20px",
           _focus: {
             backgroundColor: "#f5f5f5",
           },
@@ -314,6 +315,8 @@ const theme = extendTheme({
         },
         list: {
           minWidth: "156px",
+          padding: "10px 0",
+          borderRadius: "10px",
           boxShadow: "0px 4px 7px rgb(0 0 0 / 5%)",
         },
       },

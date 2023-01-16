@@ -295,7 +295,8 @@ button.chakra-button{height: auto; min-width: 0;}
 
 @media (max-width:1199px) {
     .login-hero {padding-left: 50px;padding-right: 50px;}
-    .main-content{padding: 126px 30px 30px;}
+    .main-content{padding: 126px 20px 20px;}
+    .header{padding: 20px;}
 }
 
 @media (max-width:991px) {
@@ -325,7 +326,6 @@ button.chakra-button{height: auto; min-width: 0;}
     .open-sidebar .overlay, .show-searchbar .overlay{ opacity: 1; visibility: visible;}
     .show-searchbar .overlay{z-index: 2;}
     .open-sidebar .overlay{z-index: 3;}
-    .header { padding: 20px; }
     .header .chakra-menu__menu-button .user-profile-pic{margin-right: 0;}
     .header .chakra-menu__menu-button .chakra-button__icon{margin-left: 0;}
     .header .search-toggle img{height: 21px;width: 21px;}

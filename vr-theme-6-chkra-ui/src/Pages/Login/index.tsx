@@ -130,7 +130,7 @@ const Login = () => {
                   w="100%"
                   as={Link}
                   to="/dashboard"
-                  className="btn-dark"
+                  className="btn-primary"
                   title="Login"
                 >
                   Login

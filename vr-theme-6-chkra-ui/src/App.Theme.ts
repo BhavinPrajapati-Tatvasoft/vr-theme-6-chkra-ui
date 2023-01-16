@@ -42,7 +42,6 @@ const theme = extendTheme({
           _hover: { bg: "rgb(62, 129, 105)" },
           _focus: { bg: "rgb(62, 129, 105)", boxShadow: "none" },
           "@media (max-width:767px)": {
-            padding: "8px 30px",
             fontSize: "16px",
             lineHeight: "20px",
           },
@@ -62,7 +61,6 @@ const theme = extendTheme({
           _hover: { bg: "rgba(0,0,0,0.08)" },
           _focus: { bg: "rgba(0,0,0,0.08)", boxShadow: "none" },
           "@media (max-width:767px)": {
-            padding: "6px 30px",
             fontSize: "16px",
             lineHeight: "20px",
           },

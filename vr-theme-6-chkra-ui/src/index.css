@@ -348,9 +348,9 @@ button.chakra-button{height: auto; min-width: 0;}
     .weekly-report-card h5.chakra-text{margin-right: auto;}
     .transaction-card ul li a{padding: 8px 0;}
     .icon-btn.chakra-button{height: 44px; width: 44px;}
-    .header .toggle-button{margin-right: 10px;}
+    .header .toggle-button{margin-right: 10px; padding: 0;}
     .header .logo img{height: 36px; width: 36px;}
-    .header .right-content .icon-btn{margin: 0 6px;}
+    .header .right-content .icon-btn{margin: 0 6px; padding: 0;}
     .header{padding: 16px;}
     .header .search-wrapper>div{margin: 16px auto;}
     .statistic-card {padding: 16px;}

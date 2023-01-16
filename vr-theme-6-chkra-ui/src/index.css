@@ -107,8 +107,6 @@ textarea { -webkit-appearance: none; appearance: none;}
 .chakra-input::-moz-placeholder {color: #9C9C9C;}
 .chakra-input:-ms-input-placeholder {color: #9C9C9C;}
 .chakra-input:-moz-placeholder {color: #9C9C9C;}
-
-
 .chakra-textarea::-webkit-input-placeholder {color: #9C9C9C;}
 .chakra-textarea::-moz-placeholder {color: #9C9C9C;}
 .chakra-textarea:-ms-input-placeholder {color: #9C9C9C;}
@@ -130,9 +128,13 @@ h3.chakra-text{font-size: 30px;line-height: 36px;}
 h5.chakra-text{font-size: 20px;line-height: 26px;color: #4B4B4B;}
 h6.chakra-text{font-size: 18px;line-height: 24px;font-weight: 300;color: #4B4B4B;}
 
+/* Common CSS
+--------------------------------------------------------------------------------------------------------*/
 .chakra-input__group{margin-bottom: 30px;}
-.page-title{ padding-bottom: 21px;}
 .chakra-input{box-shadow: none !important;}
+.icon-20 {height: 20px !important;width: 20px !important;}
+.page-title{ padding-bottom: 21px;}
+
 /* Custom Card
 --------------------------------------------------------------------------------------------------------*/
 .custom-card{padding: 26px 30px;height: 100%;}
@@ -142,9 +144,7 @@ h6.chakra-text{font-size: 18px;line-height: 24px;font-weight: 300;color: #4B4B4B
 .card-heading .header-link:hover::after,
 .card-heading .header-link:focus::after { width: 100%; }
 
-.icon-20 {height: 20px !important;width: 20px !important;}
-.main-content{ padding: 127px 40px 40px; transition: all 0.3s; width: calc(100% - var(--sidebar-width)); margin-left: var(--sidebar-width); }
-.page-title{ padding-bottom: 21px;}
+div.chakra-table__container{width: calc(100vw - 64px);}
 
 /* Button
 --------------------------------------------------------------------------------------------------------*/
@@ -291,7 +291,12 @@ button.chakra-button{height: auto; min-width: 0;}
 .secondary-section {padding-top: 30px;}
 .btn-groups{padding-bottom: 20px;}
 
-/* .chakra-select__icon{background-image: url(./assets/images/bar-chart-icon.svg); } */
+/* Checkbox
+--------------------------------------------------------------------------------------------------------*/
+span.chakra-checkbox__control{transition: all 0.3s;}
+span.chakra-checkbox__control[data-checked], span.chakra-checkbox__control[data-checked]:hover{background-color: transparent; border-color: transparent;     transition: all 0.3s;}
+.chakra-checkbox__control >div> svg{ stroke-width: 0 !important; background-image: url('../src/assets/images/checkbox-checked-ic.svg'); background-size: 16px; height: 16px; width: 16px; transition: all 0.3s;}
+
 /* Responsive Media Query
 --------------------------------------------------------------------------------------------------------*/
 @media (max-width:1399px) {
@@ -321,10 +326,7 @@ button.chakra-button{height: auto; min-width: 0;}
     .login-wrapper .other-links {justify-content: center;gap: 16px;flex-wrap: wrap;}
     .login-main .copyright-text {color: #9C9C9C;display: block;padding-top: 16px;text-align: center;}
     .login-wrapper .login-main .MuiTypography-body1.sign-up-link {padding: 30px 0;}
-
     .custom-card{padding: 16px;}
-
-
     .open-sidebar{overflow: hidden;}
     .open-sidebar, .show-searchbar{overflow: hidden;}
     .sidebar{left: -238px; top: 0;}
@@ -346,7 +348,6 @@ button.chakra-button{height: auto; min-width: 0;}
 @media (max-width:767px) {
     h2.chakra-text{font-size: 32px;line-height: 38px;}
     h3.chakra-text{font-size: 26px;line-height: 30px;}
-
     .login-hero {padding: 30px;}
     .login-wrapper .login-main{min-height: calc(100vh - 78px);}
     .main-content{padding: 100px 16px 16px;}
@@ -371,9 +372,7 @@ button.chakra-button{height: auto; min-width: 0;}
     h3.chakra-text{font-size: 20px;line-height: 26px;}
     h5.chakra-text{font-size: 16px;line-height: 20px;}
     h6.chakra-text{font-size: 15px;line-height: 20px;}
-
     .login-hero {padding: 20px;}
     .login-wrapper .login-main {padding: 20px;}
-
     .statistic-card .img-block {width: 54px;height: 54px;}
 }

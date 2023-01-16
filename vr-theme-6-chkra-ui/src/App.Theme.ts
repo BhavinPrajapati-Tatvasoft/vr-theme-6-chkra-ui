@@ -147,6 +147,8 @@ const theme = extendTheme({
         control: {
           padding: "1",
           borderColor: "#9C9C9C",
+          borderWidth: "1px",
+          borderRadius: "3px",
           _focus: {
             boxShadow: "none",
             borderColor: "primary",
@@ -288,7 +290,11 @@ const theme = extendTheme({
       },
     },
     Table: {
-      baseStyle: {},
+      baseStyle: {
+        container: {
+          minWidth: "calc(100vw - 64px)",
+        },
+      },
       sizes: {},
       variants: {
         simple: {

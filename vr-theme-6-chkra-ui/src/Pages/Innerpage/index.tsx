@@ -37,7 +37,6 @@ import {
   alertInfoIcon,
   alertWarningIcon,
   alertSuccessIcon,
-  checkboxCheckedIcon,
   arrowDownIcon,
 } from "../../assets/images";
 import Header from "../../Components/Header";
@@ -97,7 +96,11 @@ const Innerpage = () => {
                 <option value="option3">Option 3</option>
               </Select>
             </InputGroup>
-            <Textarea placeholder="Multiple  line" rows={4} mb={{base: '16px' , md: "30px"}}/>
+            <Textarea
+              placeholder="Multiple  line"
+              rows={4}
+              mb={{ base: "16px", md: "30px" }}
+            />
 
             {/* -------- Two column start ---------  */}
             <section className="secondary-section">
@@ -112,7 +115,6 @@ const Innerpage = () => {
                     <Input type="text" placeholder="Username" />
                   </InputGroup>
                 </GridItem>
-
                 <GridItem colSpan={{ base: 12, md: 3 }}>
                   <InputGroup>
                     <Input
@@ -133,13 +135,11 @@ const Innerpage = () => {
                     </InputRightElement>
                   </InputGroup>
                 </GridItem>
-
                 <GridItem colSpan={{ base: 12, md: 3 }}>
                   <InputGroup>
                     <Input type="text" placeholder="Name" />
                   </InputGroup>
                 </GridItem>
-
                 <GridItem colSpan={{ base: 12, md: 3 }}>
                   <InputGroup>
                     <Input
@@ -166,13 +166,11 @@ const Innerpage = () => {
                     <Input type="text" placeholder="Focus" />
                   </InputGroup>
                 </GridItem>
-
                 <GridItem colSpan={{ base: 12, lg: 4, md: 6 }}>
                   <InputGroup>
                     <Input type="text" placeholder="Disabled" disabled />
                   </InputGroup>
                 </GridItem>
-
                 <GridItem colSpan={{ base: 12, lg: 4, md: 6 }}>
                   <InputGroup>
                     <Select
@@ -201,7 +199,6 @@ const Innerpage = () => {
                     <Input type="text" placeholder="Username" />
                   </InputGroup>
                 </GridItem>
-
                 <GridItem colSpan={{ base: 12, lg: 3, md: 6 }}>
                   <InputGroup>
                     <Input
@@ -224,7 +221,6 @@ const Innerpage = () => {
                     </InputRightElement>
                   </InputGroup>
                 </GridItem>
-
                 <GridItem colSpan={{ base: 12, lg: 3, md: 6 }}>
                   <InputGroup>
                     <Select
@@ -249,7 +245,6 @@ const Innerpage = () => {
             {/* -------- Other Design start ---------  */}
             <section className="secondary-section">
               <Text as="h5">Other Design elements</Text>
-
               <Text as="h6" pt="1">
                 File Upload
               </Text>
@@ -269,6 +264,7 @@ const Innerpage = () => {
                 <p>No item Selected</p>
               </div>
 
+              {/* -------- Checkbox start ---------  */}
               <Text as="h6">Check Box</Text>
               <div className="check-group">
                 <HStack spacing="50px">
@@ -277,6 +273,7 @@ const Innerpage = () => {
                 </HStack>
               </div>
 
+              {/* -------- Radio start ---------  */}
               <Text as="h6">Radio Button</Text>
               <RadioGroup defaultValue="Selected" className="radio-group">
                 <HStack spacing="50px">
@@ -285,6 +282,7 @@ const Innerpage = () => {
                 </HStack>
               </RadioGroup>
 
+              {/* -------- Snackbar start ---------  */}
               <Text as="h6">Snack Bar</Text>
               <SimpleGrid
                 gap={6}
@@ -305,7 +303,6 @@ const Innerpage = () => {
                     ml="auto"
                   />
                 </Alert>
-
                 <Alert status="info" className="alert-info">
                   <Image src={alertInfoIcon} />
                   <Box>
@@ -350,12 +347,14 @@ const Innerpage = () => {
                 </Alert>
               </SimpleGrid>
 
+              {/* -------- Button Group start ---------  */}
               <Text as="h6">CTA</Text>
               <HStack spacing="20px" className="btn-groups">
                 <Button variant="primary">Primary</Button>
                 <Button variant="outline">Secondary</Button>
               </HStack>
 
+              {/* -------- Tab start ---------  */}
               <div className="secondary-section tab-wrapper">
                 <Text as="h5">Tabs</Text>
                 <Tabs>
@@ -365,7 +364,6 @@ const Innerpage = () => {
                     <Tab>Tab 3</Tab>
                     <Tab>Tab 4</Tab>
                   </TabList>
-
                   <TabPanels>
                     <TabPanel>
                       It is a long established fact that a reader will be

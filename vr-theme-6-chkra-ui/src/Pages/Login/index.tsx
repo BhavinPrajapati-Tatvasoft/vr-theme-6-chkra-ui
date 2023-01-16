@@ -1,15 +1,31 @@
-import * as React from 'react';
+import * as React from "react";
 import { Helmet } from "react-helmet";
-import { Image, Show, Text, InputGroup, Input, InputRightElement, Button, Checkbox, IconButton, Grid, GridItem, } from '@chakra-ui/react';
-import { Link } from 'react-router-dom';
-import { loginMockup, LogoWhite, showPasswordIcon, hidePasswordIcon } from '../../assets/images';
+import {
+  Image,
+  Show,
+  Text,
+  InputGroup,
+  Input,
+  InputRightElement,
+  Button,
+  Checkbox,
+  IconButton,
+  Grid,
+  GridItem,
+} from "@chakra-ui/react";
+import { Link } from "react-router-dom";
+import {
+  loginMockup,
+  LogoWhite,
+  showPasswordIcon,
+  hidePasswordIcon,
+} from "../../assets/images";
 import { Typewriter } from "react-simple-typewriter";
-import gsap from 'gsap';
+import gsap from "gsap";
 
 const { useLayoutEffect } = React;
 
 const Login = () => {
-
   //password input state
   const [show, setShow] = React.useState(false);
   const handleClick = () => setShow(!show);
@@ -24,22 +40,24 @@ const Login = () => {
     );
   }, []);
 
-
   return (
     <>
       <Helmet>
         <title>Login</title>
       </Helmet>
       <section className="login-wrapper">
-        <Grid templateColumns='repeat(12, 1fr)' className='login-container'>
+        <Grid templateColumns="repeat(12, 1fr)" className="login-container">
+          {/* Login Hero Banner Start */}
           <GridItem colSpan={{ base: 12, lg: 7 }} className="login-hero">
             <div className="login-content">
-              <Link to="#" className="login-logo" title='Company'>
+              <Link to="#" className="login-logo" title="Company">
                 <Image src={LogoWhite} alt="Company" />
               </Link>
-              <Show above='lg'>
+              <Show above="lg">
                 <div className="login-mockup">
-                  <img src={loginMockup} alt="Mockup"
+                  <img
+                    src={loginMockup}
+                    alt="Mockup"
                     onLoad={(e) => {
                       let loginImg = gsap.timeline();
                       loginImg.fromTo(
@@ -48,16 +66,26 @@ const Login = () => {
                         { scale: 1, opacity: 1 },
                         "<"
                       );
-                    }} />
+                    }}
+                  />
                 </div>
-                <Text className="copyright-text"> © 2021 Company. All Rights Reserved. </Text>
+                <Text className="copyright-text">
+                  © 2021 Company. All Rights Reserved.
+                </Text>
               </Show>
             </div>
           </GridItem>
-          <GridItem colStart={{ base: 1, lg: 8 }} colEnd={13} className='login-main'>
+          {/* Login Hero Banner End */}
+
+          {/* Login Content Start */}
+          <GridItem
+            colStart={{ base: 1, lg: 8 }}
+            colEnd={13}
+            className="login-main"
+          >
             <div className="form-wrapper">
               <form>
-                <Text as='h2' fontSize='xl'>
+                <Text as="h2" fontSize="xl">
                   <Typewriter
                     words={["Welcome Back!"]}
                     loop={false}
@@ -68,43 +96,76 @@ const Login = () => {
                     delaySpeed={1000}
                   />
                 </Text>
-                <Text as='h5'>Login into your account</Text>
+                <Text as="h5">Login into your account</Text>
                 <InputGroup>
-                  <Input
-                    type='text'
-                    placeholder='Username'
-                  />
+                  <Input type="text" placeholder="Username" />
                 </InputGroup>
-
                 <InputGroup>
                   <Input
-                    type={show ? 'text' : 'password'}
-                    placeholder='Password'
+                    type={show ? "text" : "password"}
+                    placeholder="Password"
                   />
                   <InputRightElement>
-                    <IconButton aria-label='Password Icon' onClick={handleClick} icon={<Image src={show ? showPasswordIcon : hidePasswordIcon} />} className='password-iconbutton' />
+                    <IconButton
+                      aria-label="Password Icon"
+                      onClick={handleClick}
+                      icon={
+                        <Image
+                          src={show ? showPasswordIcon : hidePasswordIcon}
+                        />
+                      }
+                      className="password-iconbutton"
+                    />
                   </InputRightElement>
                 </InputGroup>
                 <div className="forgot-password">
                   <Checkbox>Remember me</Checkbox>
-                  <Link to="#" title='forgot password' className='custom-link'>Forgot password</Link>
+                  <Link to="#" title="forgot password" className="custom-link">
+                    Forgot password
+                  </Link>
                 </div>
-                <Button variant='primary' maxW='452px' w='100%' as={Link} to='/dashboard' className='btn-dark' title='Login'>Login</Button>
-                <Text className='sign-up-link'>Don’t have an account? <Link to="#" title='Sign up'>Sign up</Link></Text>
+                <Button
+                  variant="primary"
+                  maxW="452px"
+                  w="100%"
+                  as={Link}
+                  to="/dashboard"
+                  className="btn-dark"
+                  title="Login"
+                >
+                  Login
+                </Button>
+                <Text className="sign-up-link">
+                  Don’t have an account?{" "}
+                  <Link to="#" title="Sign up">
+                    Sign up
+                  </Link>
+                </Text>
               </form>
               <div className="other-links">
-                <Link to="#" title='Privacy Policy' className='custom-link'>Privacy Policy</Link>
-                <Link to="#" title='Terms and Condition' className='custom-link'>Terms and Condition</Link>
-                <Link to="#" title='Help' className='custom-link'>Help</Link>
+                <Link to="#" title="Privacy Policy" className="custom-link">
+                  Privacy Policy
+                </Link>
+                <Link
+                  to="#"
+                  title="Terms and Condition"
+                  className="custom-link"
+                >
+                  Terms and Condition
+                </Link>
+                <Link to="#" title="Help" className="custom-link">
+                  Help
+                </Link>
               </div>
-              <Show below='lg'>
-                <Text className="copyright-text"> © 2021 Company. All Rights Reserved. </Text>
+              <Show below="lg">
+                <Text className="copyright-text">
+                  © 2021 Company. All Rights Reserved.
+                </Text>
               </Show>
             </div>
-            {/* </Box> */}
           </GridItem>
+          {/* Login Content End */}
         </Grid>
-        {/* </SimpleGrid> */}
       </section>
     </>
   );

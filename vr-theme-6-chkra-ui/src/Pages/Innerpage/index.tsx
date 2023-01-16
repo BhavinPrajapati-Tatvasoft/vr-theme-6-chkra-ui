@@ -10,6 +10,7 @@ import {
   Grid,
   GridItem,
   HStack,
+  Icon,
   IconButton,
   Image,
   Input,
@@ -36,6 +37,7 @@ import {
   alertInfoIcon,
   alertWarningIcon,
   alertSuccessIcon,
+  checkboxCheckedIcon,
   arrowDownIcon,
 } from "../../assets/images";
 import Header from "../../Components/Header";
@@ -48,6 +50,9 @@ const Innerpage = () => {
   //password input state
   const [show, setShow] = React.useState(false);
   const handleClick = () => setShow(!show);
+
+  const [showPassword, setShowPassword] = React.useState(false);
+  const handlePasswordClick = () => setShowPassword(!showPassword);
 
   //GSAP Animation
   useLayoutEffect(() => {
@@ -200,16 +205,18 @@ const Innerpage = () => {
                 <GridItem colSpan={{ base: 12, lg: 3, md: 6 }}>
                   <InputGroup>
                     <Input
-                      type={show ? "text" : "password"}
+                      type={showPassword ? "text" : "password"}
                       placeholder="Password"
                     />
                     <InputRightElement>
                       <IconButton
                         aria-label="Password Icon"
-                        onClick={handleClick}
+                        onClick={handlePasswordClick}
                         icon={
                           <Image
-                            src={show ? showPasswordIcon : hidePasswordIcon}
+                            src={
+                              showPassword ? showPasswordIcon : hidePasswordIcon
+                            }
                           />
                         }
                         className="password-iconbutton"
@@ -243,7 +250,9 @@ const Innerpage = () => {
             <section className="secondary-section">
               <Text as="h5">Other Design elements</Text>
 
-              <Text as="h6">File Upload</Text>
+              <Text as="h6" pt="1">
+                File Upload
+              </Text>
               <div className="file-upload-main">
                 <div className="file-upload-wrapper">
                   <input
@@ -262,7 +271,7 @@ const Innerpage = () => {
 
               <Text as="h6">Check Box</Text>
               <div className="check-group">
-                <HStack spacing="24px">
+                <HStack spacing="50px">
                   <Checkbox defaultChecked>Selected</Checkbox>
                   <Checkbox>Not Yet Selected</Checkbox>
                 </HStack>
@@ -270,7 +279,7 @@ const Innerpage = () => {
 
               <Text as="h6">Radio Button</Text>
               <RadioGroup defaultValue="Selected" className="radio-group">
-                <HStack spacing="24px">
+                <HStack spacing="50px">
                   <Radio value="Selected">Selected</Radio>
                   <Radio value="Not Selected">Not Yet Selected</Radio>
                 </HStack>

@@ -59,7 +59,6 @@ const theme = extendTheme({
         },
       },
     },
-
     Input: {
       variants: {
         flushed: {
@@ -67,6 +66,7 @@ const theme = extendTheme({
             borderColor: "#E9E9E9",
             borderRadius: "0",
             pr: "10",
+            color: "#4B4B4B",
             _focus: {
               borderColor: ["primary"],
               boxShadow: "none",
@@ -101,7 +101,7 @@ const theme = extendTheme({
             },
           },
           icon: {
-            right: "10px",
+            color: "#9C9C9C",
           },
         },
       },
@@ -155,6 +155,26 @@ const theme = extendTheme({
         },
         control: {
           borderColor: "#9C9C9C",
+          borderWidth: "2px",
+          backgroundColor: "#FFFFFF",
+          "&:before": {
+            width: "8px",
+            height: "8px",
+          },
+          _checked: {
+            backgroundColor: "#FFFFFF",
+            borderColor: "primary",
+            "&:before": {
+              backgroundColor: "primary",
+              width: "8px",
+              height: "8px",
+            },
+            _hover: {
+              boxShadow: "none",
+              backgroundColor: "#FFFFFF",
+              borderColor: "primary",
+            },
+          },
           _focus: {
             boxShadow: "none",
             borderColor: "primary",
@@ -248,6 +268,7 @@ const theme = extendTheme({
           tabpanel: {
             color: "#4B4B4B",
             p: "24px 0 0",
+            lineHeight: "24px",
           },
         },
       },
@@ -294,6 +315,13 @@ const theme = extendTheme({
         list: {
           minWidth: "156px",
           boxShadow: "0px 4px 7px rgb(0 0 0 / 5%)",
+        },
+      },
+      _invalid: {
+        borderColor: "#FF3232",
+        boxShadow: "none",
+        _focus: {
+          borderColor: "#cc0000",
         },
       },
     },

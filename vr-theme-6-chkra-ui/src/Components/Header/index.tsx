@@ -24,7 +24,7 @@ import {
   profileDownArrowIcon,
   searchIcon,
 } from "../../assets/images";
-import { Link as customLink} from 'react-router-dom';
+import { Link as customLink } from "react-router-dom";
 
 const Header: React.FC = () => {
   return (
@@ -40,7 +40,7 @@ const Header: React.FC = () => {
           variant="outline"
           aria-label="toggle-menu"
           className="toggle-button icon-btn"
-          icon={<Avatar name="Hamburger" src={hamburgerIcon} />}
+          icon={<Image alt="Hamburger" src={hamburgerIcon} />}
           onClick={(e) => document.body.classList.toggle("open-sidebar")}
         />
         <Link href="#" title="Company" className="logo">
@@ -58,7 +58,7 @@ const Header: React.FC = () => {
               <IconButton
                 variant="outline"
                 aria-label="Search"
-                icon={<Avatar name="Search" src={searchIcon} />}
+                icon={<Image alt="Search" src={searchIcon} />}
               />
             </div>
           </div>
@@ -67,7 +67,7 @@ const Header: React.FC = () => {
               variant="outline"
               aria-label="Search"
               className="search-toggle icon-btn"
-              icon={<Avatar name="Search" src={searchIcon} />}
+              icon={<Image alt="Search" src={searchIcon} />}
               onClick={(e) => document.body.classList.toggle("show-searchbar")}
             />
           </Show>
@@ -75,15 +75,17 @@ const Header: React.FC = () => {
             variant="outline"
             aria-label="Message"
             className="icon-btn"
-            icon={<Avatar name="Message" src={messageIcon} />}
+            icon={<Image alt="Message" src={messageIcon} />}
           />
           <IconButton
             variant="outline"
             aria-label="Notification"
             className="icon-btn"
-            icon={<Avatar name="Notification" src={notificationIcon} />}
+            icon={<Image alt="Notification" src={notificationIcon} />}
           />
-          <Divider orientation="vertical" />
+          <Hide below="md">
+            <Divider orientation="vertical" />
+          </Hide>
           <Menu>
             <MenuButton
               as={Button}
@@ -101,7 +103,9 @@ const Header: React.FC = () => {
             <MenuList>
               <MenuItem>Profile</MenuItem>
               <MenuItem>My Account</MenuItem>
-              <MenuItem as={customLink} to="/login">Logout</MenuItem>
+              <MenuItem as={customLink} to="/login">
+                Logout
+              </MenuItem>
             </MenuList>
           </Menu>
         </div>

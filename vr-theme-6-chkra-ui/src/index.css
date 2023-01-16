@@ -69,7 +69,7 @@ q:after {
 html,
 body {min-width: 375px; min-height: 100vh;}
 
-body {font-weight: 400; font-size: 15px; line-height: 20px; margin: 0; background-color: #fafafa; color: #4B4B4B; -ms-overflow-style: scrollbar; -webkit-font-smoothing: subpixel-antialiased;}
+html body {font-weight: 400; font-size: 15px; line-height: 20px; margin: 0; background-color: #fafafa; color: #4B4B4B; -ms-overflow-style: scrollbar; -webkit-font-smoothing: subpixel-antialiased;}
 
 .wrapper {min-height: 100vh;}
 a {color: #000;text-decoration: none;}
@@ -126,7 +126,7 @@ h6.chakra-text{font-size: 18px;line-height: 24px;font-weight: 300;color: #4B4B4B
 
 .chakra-input__group{margin-bottom: 30px;}
 .page-title{ padding-bottom: 21px;}
-
+.chakra-input{box-shadow: none !important;}
 /* Custom Card
 --------------------------------------------------------------------------------------------------------*/
 .custom-card{padding: 26px 30px;height: 100%;}
@@ -142,25 +142,26 @@ h6.chakra-text{font-size: 18px;line-height: 24px;font-weight: 300;color: #4B4B4B
 
 /* Button
 --------------------------------------------------------------------------------------------------------*/
-button.chakra-button{ min-width: 0;}
-.icon-btn.chakra-button{width: 53px; height: 47px; border-radius: 10px; border-color: #EAEAEA;}
+button.chakra-button{height: auto; min-width: 0;}
+.icon-btn.chakra-button{width: 53px; height: 47px; border-radius: 10px; border:1px solid #EAEAEA;}
 .icon-btn .chakra-avatar{height: 26px; width: 26px;}
 
 /* Header
 --------------------------------------------------------------------------------------------------------*/
 .header{ display: flex; align-items: center; background: #FFFFFF; box-shadow: 0px 1px 19px 1px rgb(0 0 0 / 8%); padding: 20px 30px; position: fixed; top: 0; left: 0; right: 0; z-index: 2;}
 .header .toggle-button{margin-right: 30px;}
-.header .logo{display: inline-block; vertical-align: middle; margin-right: 8px;}
+.header .logo{display: inline-block; vertical-align: middle; margin-right: 8px; box-shadow: none !important;}
 .header .logo img{display: block;}
 .header .search-wrapper{position: relative; max-width: 304px; width: 100%; margin-right: 10px;}
-.header .search-wrapper .chakra-input{border-radius: 10px; border-color: #EAEAEA; padding: 8px 44px 8px 20px; height: 48px; color: #9C9C9C;}
-.header .search-wrapper .chakra-input:focus{border-color: #59B997;}
-.header .search-wrapper .chakra-button{position: absolute; right: 14px; top: 50%; transform: translateY(-50%); padding: 6px; border-radius: 50%; background-color: transparent !important; border: none !important;height: auto;}
+.header .search-wrapper .chakra-input{border-radius: 10px; border-color: #EAEAEA !important; padding: 8px 44px 8px 20px; height: 48px; color: #9C9C9C; background-color: #FFFFFF;}
+.header .search-wrapper .chakra-input:focus{border-color: #59B997 !important;}
+.header .search-wrapper .chakra-button{position: absolute; right: 14px; top: 50%; transform: translateY(-50%); padding: 6px; border-radius: 50%; background-color: transparent !important; border: none !important;height: auto; z-index: 1;}
 .header .search-wrapper .chakra-button:focus, .header .search-wrapper .chakra-button:hover{background-color: rgba(0, 0, 0, 0.1) !important;}
 .header .search-wrapper .chakra-button .chakra-avatar{height: 18px; width: 18px;}
 .header .right-content{display: flex; align-items: center; justify-content: flex-end; flex-grow: 1;}
 .header .right-content .icon-btn{margin: 0 10px;}
-.header .chakra-menu__menu-button{background-color: transparent; border: 1px solid transparent; border-radius: 8px; font-weight: 400; padding: 8px 8px 8px 10px;}
+.header .chakra-menu__menu-button{background-color: transparent !important; border: 1px solid transparent; border-radius: 8px; font-weight: 400; padding: 8px 8px 8px 10px;}
+.header .chakra-menu__menu-button:hover, .header .chakra-menu__menu-button:focus{background-color: rgba(0, 0, 0, 0.08) !important;}
 .header .chakra-menu__menu-button >span{display: flex;align-items: center;}
 .header .chakra-menu__menu-button .user-profile-pic{margin-right: 8px;}
 .header .chakra-menu__menu-button .chakra-button__icon{margin-left: 10px;}
@@ -219,7 +220,7 @@ button.chakra-button{ min-width: 0;}
 .sidebar li .nav-link::after { content: ''; position: absolute; left: 50%; bottom: 0; top: 0; transform: translateX(-50%); height: 100%; width: 0; background-color: #4CC59A; transition: all 300ms ease; z-index: -1;}
 .sidebar li .nav-link:hover::after { width: 100%;}
 .sidebar li .nav-link.active{background-color: #4CC59A;}
-.open-sidebar .sidebar{left: -238px;}
+.open-sidebar .sidebar{left: calc(-1 * var(--sidebar-width));}
 .sidebar li a:not(.active):focus {background-color: rgba(0, 0, 0, 0.08);}
 
 
@@ -289,17 +290,12 @@ button.chakra-button{ min-width: 0;}
 
 @media (max-width:1199px) {
     .login-hero {padding-left: 50px;padding-right: 50px;}
-
     .main-content{padding: 126px 30px 30px;}
 }
 
 @media (max-width:991px) {
     h2.chakra-text{font-size: 40px;line-height: 46px;}
-
     .main-content{margin-left: 0; width: 100%; padding: 108px 20px 20px;}
-
-
-
     .login-hero {padding: 40px;}
     .login-container{height: auto;}
     .login-wrapper .login-logo {margin: 0 auto;}
@@ -317,12 +313,22 @@ button.chakra-button{ min-width: 0;}
 
 
     .open-sidebar{overflow: hidden;}
+    .open-sidebar, .show-searchbar{overflow: hidden;}
     .sidebar{left: -238px; top: 0;}
     .overlay{ position: fixed; top: 0; left: 0; bottom: 0; width: 100%; visibility: hidden; opacity: 0; transition: all 0.3s; background-color: rgba(0, 0, 0, 0.5); z-index: 1;}
     .open-sidebar .sidebar{left: 0;}
     .open-sidebar .overlay, .show-searchbar .overlay{ opacity: 1; visibility: visible;}
     .show-searchbar .overlay{z-index: 2;}
     .open-sidebar .overlay{z-index: 3;}
+    .header { padding: 20px; }
+    .header .chakra-menu__menu-button .user-profile-pic{margin-right: 0;}
+    .header .chakra-menu__menu-button .chakra-button__icon{margin-left: 0;}
+    .header .search-toggle img{height: 21px;width: 21px;}
+    .header .toggle-button{margin-right: 20px;}
+    .header .chakra-menu__menu-button{padding: 4px;}
+    .header .search-wrapper{position: fixed;left: 0;right: 0;top: -100%;background-color: #3EAE86;max-width: none; transition: all 0.3s; padding: 0 16px; z-index: 1;}
+    .header .search-wrapper>div{position: relative; max-width: 450px; margin: 20px auto;}
+    .show-searchbar .search-wrapper{top: 0;}
 }
 
 @media (max-width:767px) {
@@ -334,6 +340,12 @@ button.chakra-button{ min-width: 0;}
     .weekly-report-card .card-heading {flex-direction: column;gap: 16px;}
     .weekly-report-card h5.chakra-text{margin-right: auto;}
     .transaction-card ul li a{padding: 8px 0;}
+    .icon-btn.chakra-button{height: 44px; width: 44px;}
+    .header .toggle-button{margin-right: 10px;}
+    .header .logo img{height: 36px; width: 36px;}
+    .header .right-content .icon-btn{margin: 0 6px;}
+    .header{padding: 16px;}
+    .header .search-wrapper>div{margin: 16px auto;}
 }
 
 @media (max-width:575px) {

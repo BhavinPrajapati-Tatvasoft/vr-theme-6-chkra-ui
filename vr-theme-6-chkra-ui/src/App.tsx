@@ -3,11 +3,15 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Login from "./Pages/Login";
 import Dashboard from "./Pages/Dashboard";
 import theme from "./App.Theme";
+import Innerpage from "./Pages/Innerpage";
 
 function App() {
   return (
     <ChakraProvider theme={theme}>
       <BrowserRouter>
+      <Routes>
+          <Route path="/innerpage" element={<Innerpage />} />
+        </Routes>
         <Routes>
           <Route path="/dashboard" element={<Dashboard />} />
         </Routes>

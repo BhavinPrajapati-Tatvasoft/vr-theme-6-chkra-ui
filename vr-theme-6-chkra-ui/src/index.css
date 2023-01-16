@@ -291,6 +291,7 @@ button.chakra-button{height: auto; min-width: 0;}
 @media (max-width:1399px) {
     .statistic-card{padding: 20px 15px;}
     .statistic-card .img-block {width: 64px;height: 64px;}
+    .statistic-card .img-block img{height: 30px; width: 30px;}
 }
 
 @media (max-width:1199px) {
@@ -305,7 +306,7 @@ button.chakra-button{height: auto; min-width: 0;}
     .login-hero {padding: 40px;}
     .login-container{height: auto;}
     .login-wrapper .login-logo {margin: 0 auto;}
-    .login-wrapper .login-main {padding: 30px;}
+    .login-wrapper .login-main {padding: 30px;min-height: calc(100vh - 118px);}
     .login-wrapper .form-wrapper {max-width: 450px;margin: 0 auto;min-height: calc(100vh - 218px);}
     .login-wrapper .form-wrapper .mobile-logo {display: block;padding-bottom: 40px;width: max-content;}
     .login-wrapper .login-main h2 {text-align: center;justify-content: center;}
@@ -341,6 +342,7 @@ button.chakra-button{height: auto; min-width: 0;}
     h3.chakra-text{font-size: 26px;line-height: 30px;}
 
     .login-hero {padding: 30px;}
+    .login-wrapper .login-main{min-height: calc(100vh - 78px);}
     .main-content{padding: 100px 16px 16px;}
     .weekly-report-card .card-heading {flex-direction: column;gap: 16px;}
     .weekly-report-card h5.chakra-text{margin-right: auto;}
@@ -351,6 +353,11 @@ button.chakra-button{height: auto; min-width: 0;}
     .header .right-content .icon-btn{margin: 0 6px;}
     .header{padding: 16px;}
     .header .search-wrapper>div{margin: 16px auto;}
+    .statistic-card {padding: 16px;}
+    .statistic-card h3 {padding-bottom: 8px;}
+    .secondary-section{padding-top: 10px;}
+    .chakra-input__group{margin-bottom: 20px;}
+    .page-title{padding-bottom: 16px;}
 }
 
 @media (max-width:575px) {
@@ -361,4 +368,6 @@ button.chakra-button{height: auto; min-width: 0;}
 
     .login-hero {padding: 20px;}
     .login-wrapper .login-main {padding: 20px;}
+
+    .statistic-card .img-block {width: 54px;height: 54px;}
 }

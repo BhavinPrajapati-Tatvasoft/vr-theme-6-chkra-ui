@@ -35,7 +35,8 @@ const theme = extendTheme({
                     color: '#FFFFFF',
                     textTransform: 'uppercase',
                     borderRadius: '10px',
-                    height: '54px',
+                    height: 'auto',
+                    padding: "15px 30px",
                     fontSize: '20px',
                     fontWeight: '500',
                     lineHeight: '24px',
@@ -49,7 +50,8 @@ const theme = extendTheme({
                     border: '2px solid',
                     borderRadius: '10px',
                     textTransform: 'uppercase',
-                    height: '54px',
+                    height: 'auto',
+                    padding: "13px 30px",
                     fontSize: '20px',
                     fontWeight: '500',
                     lineHeight: '24px',
@@ -65,10 +67,21 @@ const theme = extendTheme({
                     field: {
                         borderColor: '#E9E9E9',
                         borderRadius: '0',
-                        px: '2',
+                        pr: '10',
                         _focus: {
                             borderColor: ['primary'],
                             boxShadow: 'none',
+                        },
+                        _disabled: {
+                            borderBottom: '1px dashed #CECECE'
+                        },
+                        _invalid: {
+                            borderBottom: '1px solid #FF3232',
+                            boxShadow: 'none',
+                            _focus: {
+                                boxShadow: '0px 1px 0px 0px #e53e3e',
+                                borderColor: '#FF3232',
+                            },
                         },
                     },
                 },
@@ -156,8 +169,8 @@ const theme = extendTheme({
                 outline: {
                     container: {
                         borderRadius: '10px',
-                        padding: '26px 30px',
                         border: '1px solid #EAEAEA',
+                        bg: '#FFFFFF'
                     },
                 },
             },
@@ -191,7 +204,6 @@ const theme = extendTheme({
                         p: '0'
                     },
                     tab: {
-                        // bg: 'gray.100',
                         fontSize: '18px',
                         fontWeight: '300',
                         lineHeight: '20px',
@@ -201,7 +213,16 @@ const theme = extendTheme({
                         _selected: {
                             color: 'primary',
                             fontWeight: '500',
-                            borderBottomWidth: '3px'
+                            borderBottomWidth: '3px',
+                            _hover: {
+                                color: 'primary'
+                            },
+                        },
+                        _focus: {
+                            boxShadow: 'none',
+                        },
+                        _hover: {
+                            color: '#000'
                         },
                     },
                     tablist: {
@@ -222,7 +243,7 @@ const theme = extendTheme({
             sizes: {},
             variants: {
                 simple: {
-                    td: { padding: '4px 14px', fontSize: '15px', fontWeight: 400, color: '#4B4B4B', },
+                    td: { padding: '4px 14px', fontSize: '15px', fontWeight: 400, color: '#4B4B4B',verticalAlign: 'middle' },
                     th: { padding: '12px 14px', fontSize: '15px', textTransform: 'capitalize', color: '#9C9C9C', fontWeight: '400' }
                 },
             },

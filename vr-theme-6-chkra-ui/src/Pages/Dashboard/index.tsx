@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Card, Grid, GridItem, IconButton, Image, Img, Menu, MenuButton, MenuItem, MenuList, Progress, Table, TableContainer, Tbody, Td, Text, Th, Thead, Tr } from "@chakra-ui/react";
+import { Card, Grid, GridItem, IconButton, Image, Menu, MenuButton, MenuItem, MenuList, Progress, Table, TableContainer, Tbody, Td, Text, Th, Thead, Tr } from "@chakra-ui/react";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import { barChartIcon, keyIcon, moneyCoinIcon, threeDots, user1, user2, user3, user4, walletIcon, worldMap } from "../../assets/images";
@@ -17,7 +17,7 @@ const Dashboard: React.FC = () => {
   const progressTimelineMain = useRef(null);
   useLayoutEffect(() => {
       let statisticsSvg = gsap.timeline();
-      statisticsSvg.fromTo(".statistics-card .img-block > svg", { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 1 });
+      statisticsSvg.fromTo(".statistic-card .img-block img", { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 1 });
 
       let pageText = gsap.timeline();
       pageText.fromTo(".page-title", { y: "-40px", opacity: 0 }, { y: 0, opacity: 1, duration: 1 });
@@ -37,7 +37,7 @@ const Dashboard: React.FC = () => {
         {/* Main content Start */}
         <div className="main-content">
           <Text as="h3" className="page-title">Dashboard</Text>
-          <Grid templateColumns='repeat(12, 1fr)' gap='30px'>
+          <Grid templateColumns='repeat(12, 1fr)' gap={{base: '16px', lg: '30px'}}>
             {/* Statistics Cards Start */}
             <GridItem colSpan={{ base: 12, xl: 3, md: 6 }}>
               <a href="#" title="Property Sold" className="statistic-card blue">
@@ -225,13 +225,13 @@ const Dashboard: React.FC = () => {
                               className="custom-table-menu"
                             />
                             <MenuList>
-                              <MenuItem command='⌘T'>
+                              <MenuItem >
                                 New Row
                               </MenuItem>
-                              <MenuItem command='⌘N'>
+                              <MenuItem >
                                 New Data
                               </MenuItem>
-                              <MenuItem command='⌘⇧N'>
+                              <MenuItem >
                                 Delete Log
                               </MenuItem>
                             </MenuList>
@@ -252,13 +252,13 @@ const Dashboard: React.FC = () => {
                               className="custom-table-menu"
                             />
                             <MenuList>
-                              <MenuItem command='⌘T'>
+                              <MenuItem >
                                 New Row
                               </MenuItem>
-                              <MenuItem command='⌘N'>
+                              <MenuItem >
                                 New Data
                               </MenuItem>
-                              <MenuItem command='⌘⇧N'>
+                              <MenuItem >
                                 Delete Log
                               </MenuItem>
                             </MenuList>
@@ -279,13 +279,13 @@ const Dashboard: React.FC = () => {
                               className="custom-table-menu"
                             />
                             <MenuList>
-                              <MenuItem command='⌘T'>
+                              <MenuItem >
                                 New Row
                               </MenuItem>
-                              <MenuItem command='⌘N'>
+                              <MenuItem >
                                 New Data
                               </MenuItem>
-                              <MenuItem command='⌘⇧N'>
+                              <MenuItem >
                                 Delete Log
                               </MenuItem>
                             </MenuList>
@@ -306,13 +306,13 @@ const Dashboard: React.FC = () => {
                               className="custom-table-menu"
                             />
                             <MenuList>
-                              <MenuItem command='⌘T'>
+                              <MenuItem >
                                 New Row
                               </MenuItem>
-                              <MenuItem command='⌘N'>
+                              <MenuItem >
                                 New Data
                               </MenuItem>
-                              <MenuItem command='⌘⇧N'>
+                              <MenuItem >
                                 Delete Log
                               </MenuItem>
                             </MenuList>
@@ -333,13 +333,13 @@ const Dashboard: React.FC = () => {
                               className="custom-table-menu"
                             />
                             <MenuList>
-                              <MenuItem command='⌘T'>
+                              <MenuItem >
                                 New Row
                               </MenuItem>
-                              <MenuItem command='⌘N'>
+                              <MenuItem >
                                 New Data
                               </MenuItem>
-                              <MenuItem command='⌘⇧N'>
+                              <MenuItem >
                                 Delete Log
                               </MenuItem>
                             </MenuList>
@@ -360,13 +360,13 @@ const Dashboard: React.FC = () => {
                               className="custom-table-menu"
                             />
                             <MenuList>
-                              <MenuItem command='⌘T'>
+                              <MenuItem >
                                 New Row
                               </MenuItem>
-                              <MenuItem command='⌘N'>
+                              <MenuItem >
                                 New Data
                               </MenuItem>
-                              <MenuItem command='⌘⇧N'>
+                              <MenuItem >
                                 Delete Log
                               </MenuItem>
                             </MenuList>
@@ -387,13 +387,13 @@ const Dashboard: React.FC = () => {
                               className="custom-table-menu"
                             />
                             <MenuList>
-                              <MenuItem command='⌘T'>
+                              <MenuItem >
                                 New Row
                               </MenuItem>
-                              <MenuItem command='⌘N'>
+                              <MenuItem >
                                 New Data
                               </MenuItem>
-                              <MenuItem command='⌘⇧N'>
+                              <MenuItem >
                                 Delete Log
                               </MenuItem>
                             </MenuList>
@@ -414,13 +414,13 @@ const Dashboard: React.FC = () => {
                               className="custom-table-menu"
                             />
                             <MenuList>
-                              <MenuItem command='⌘T'>
+                              <MenuItem >
                                 New Row
                               </MenuItem>
-                              <MenuItem command='⌘N'>
+                              <MenuItem >
                                 New Data
                               </MenuItem>
-                              <MenuItem command='⌘⇧N'>
+                              <MenuItem >
                                 Delete Log
                               </MenuItem>
                             </MenuList>
@@ -441,13 +441,13 @@ const Dashboard: React.FC = () => {
                               className="custom-table-menu"
                             />
                             <MenuList>
-                              <MenuItem command='⌘T'>
+                              <MenuItem >
                                 New Row
                               </MenuItem>
-                              <MenuItem command='⌘N'>
+                              <MenuItem >
                                 New Data
                               </MenuItem>
-                              <MenuItem command='⌘⇧N'>
+                              <MenuItem >
                                 Delete Log
                               </MenuItem>
                             </MenuList>
@@ -468,13 +468,13 @@ const Dashboard: React.FC = () => {
                               className="custom-table-menu"
                             />
                             <MenuList>
-                              <MenuItem command='⌘T'>
+                              <MenuItem >
                                 New Row
                               </MenuItem>
-                              <MenuItem command='⌘N'>
+                              <MenuItem >
                                 New Data
                               </MenuItem>
-                              <MenuItem command='⌘⇧N'>
+                              <MenuItem >
                                 Delete Log
                               </MenuItem>
                             </MenuList>

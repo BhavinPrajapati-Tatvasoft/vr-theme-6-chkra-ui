@@ -97,7 +97,7 @@ const Innerpage = () => {
                 <option value="option3">Option 3</option>
               </Select>
             </InputGroup>
-            <Textarea placeholder="Multiple  line" rows={4} />
+            <Textarea placeholder="Multiple  line" rows={4} mb={{base: '16px' , md: "30px"}}/>
 
             {/* -------- Two column start ---------  */}
             <section className="secondary-section">

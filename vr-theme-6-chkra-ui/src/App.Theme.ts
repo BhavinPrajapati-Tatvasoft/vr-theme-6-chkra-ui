@@ -41,6 +41,9 @@ const theme = extendTheme({
           lineHeight: "24px",
           _hover: { bg: "rgb(62, 129, 105)" },
           _focus: { bg: "rgb(62, 129, 105)", boxShadow: "none" },
+          "@media (max-width:767px)":{
+            padding: "8px 30px",
+          },
         },
         outline: {
           bg: "#FFFFFF",
@@ -56,6 +59,9 @@ const theme = extendTheme({
           lineHeight: "24px",
           _hover: { bg: "rgba(0,0,0,0.08)" },
           _focus: { bg: "rgba(0,0,0,0.08)", boxShadow: "none" },
+          "@media (max-width:767px)":{
+            padding: "6px 30px",
+          },
         },
       },
     },
@@ -94,6 +100,7 @@ const theme = extendTheme({
           field: {
             borderColor: "#E9E9E9",
             borderRadius: "0",
+            color: "#4B4B4B",
             px: "2",
             _focus: {
               borderColor: ["primary"],

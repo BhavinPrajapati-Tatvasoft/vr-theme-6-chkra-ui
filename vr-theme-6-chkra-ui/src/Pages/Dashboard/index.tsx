@@ -37,9 +37,9 @@ const Dashboard: React.FC = () => {
         {/* Main content Start */}
         <div className="main-content">
           <Text as="h3" className="page-title">Dashboard</Text>
-          <Grid templateColumns='repeat(12, 1fr)' gap={{base: '16px', lg: '30px'}}>
+          <Grid templateColumns='repeat(12, 1fr)' gap={{base: '16px', lg: '20px', xl: '30px'}}>
             {/* Statistics Cards Start */}
-            <GridItem colSpan={{ base: 12, xl: 3, md: 6 }}>
+            <GridItem colSpan={{ base: 12, xl: 3, sm: 6 }}>
               <a href="#" title="Property Sold" className="statistic-card blue">
                 <div>
                   <Text as='h3'>
@@ -52,7 +52,7 @@ const Dashboard: React.FC = () => {
                 </div>
               </a>
             </GridItem>
-            <GridItem colSpan={{ base: 12, xl: 3, md: 6 }}>
+            <GridItem colSpan={{ base: 12, xl: 3, sm: 6 }}>
               <a href="#" title="Income" className="statistic-card pink">
                 <div>
                   <Text as='h3'>
@@ -65,7 +65,7 @@ const Dashboard: React.FC = () => {
                 </div>
               </a>
             </GridItem>
-            <GridItem colSpan={{ base: 12, xl: 3, md: 6 }}>
+            <GridItem colSpan={{ base: 12, xl: 3, sm: 6 }}>
               <a href="#" title="Expense" className="statistic-card orange">
                 <div>
                   <Text as='h3'>
@@ -78,7 +78,7 @@ const Dashboard: React.FC = () => {
                 </div>
               </a>
             </GridItem>
-            <GridItem colSpan={{ base: 12, xl: 3, md: 6 }}>
+            <GridItem colSpan={{ base: 12, xl: 3, sm: 6 }}>
               <a
                 href="#"
                 title="Property Rented"

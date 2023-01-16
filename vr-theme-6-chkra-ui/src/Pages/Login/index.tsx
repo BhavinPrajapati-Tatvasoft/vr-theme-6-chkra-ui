@@ -1,9 +1,13 @@
 import * as React from 'react';
 import { Helmet } from "react-helmet";
-import { SimpleGrid, Box, Image, Show, Text, FormControl, FormLabel, InputGroup, Input, InputRightElement, Button, Checkbox, IconButton, Menu, MenuButton, MenuItem, MenuList } from '@chakra-ui/react';
+import { SimpleGrid, Box, Image, Show, Text, InputGroup, Input, InputRightElement, Button, Checkbox, IconButton, Grid, GridItem, } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
 import { loginMockup, LogoWhite, showPasswordIcon, hidePasswordIcon } from '../../assets/images';
-import { ChevronDownIcon, SearchIcon } from '@chakra-ui/icons';
+import { SearchIcon } from '@chakra-ui/icons';
+import { Typewriter } from "react-simple-typewriter";
+import gsap from 'gsap';
+
+const { useLayoutEffect } = React;
 
 const Login = () => {
 
@@ -11,9 +15,15 @@ const Login = () => {
   const [show, setShow] = React.useState(false);
   const handleClick = () => setShow(!show);
 
-  function myFunction() {
-    return (<img src="../assets/images/hide-password-ic.svg" alt="" />);
-  }
+  //GSAP Animations
+  useLayoutEffect(() => {
+    let loginText = gsap.timeline();
+    loginText.fromTo(
+      ".login-wrapper h5",
+      { y: "-40px", opacity: 0 },
+      { y: 0, opacity: 1, delay: 0.5 }
+    );
+  }, []);
 
 
   return (
@@ -22,24 +32,43 @@ const Login = () => {
         <title>Login</title>
       </Helmet>
       <section className="login-wrapper">
-        <SimpleGrid columns={{ base: 1, lg: 2 }} className='login-container'>
-          <Box className="login-hero">
+        <Grid templateColumns='repeat(12, 1fr)' className='login-container'>
+          <GridItem colSpan={{ base: 12, lg: 7 }} className="login-hero">
             <div className="login-content">
               <Link to="#" className="login-logo" title='Company'>
                 <Image src={LogoWhite} alt="Company" />
               </Link>
               <Show above='lg'>
                 <div className="login-mockup">
-                  <img src={loginMockup} alt="Mockup" />
+                  <img src={loginMockup} alt="Mockup"
+                    onLoad={(e) => {
+                      let loginImg = gsap.timeline();
+                      loginImg.fromTo(
+                        ".login-wrapper .login-mockup img",
+                        { scale: 0, opacity: 0 },
+                        { scale: 1, opacity: 1 },
+                        "<"
+                      );
+                    }} />
                 </div>
                 <Text className="copyright-text"> © 2021 Company. All Rights Reserved. </Text>
               </Show>
             </div>
-          </Box>
-          <Box className='login-main'>
+          </GridItem>
+          <GridItem colStart={{ base: 1, lg: 8 }} colEnd={13} className='login-main'>
             <div className="form-wrapper">
               <form>
-                <Text as='h2'>Welcome Back!</Text>
+                <Text as='h2' fontSize='xl'>
+                  <Typewriter
+                    words={["Welcome Back!"]}
+                    loop={false}
+                    cursor
+                    cursorStyle="|"
+                    typeSpeed={70}
+                    deleteSpeed={100}
+                    delaySpeed={1000}
+                  />
+                </Text>
                 <Text as='h5'>Login into your account</Text>
                 <InputGroup>
                   <Input
@@ -53,8 +82,8 @@ const Login = () => {
                     type={show ? 'text' : 'password'}
                     placeholder='Password'
                   />
-                  <InputRightElement width='4.5rem'>
-                    <IconButton aria-label='Password Icon' onClick={handleClick} variant='ghost' size='md' />
+                  <InputRightElement>
+                    <IconButton aria-label='Password Icon' onClick={handleClick} icon={<Image src={show ? showPasswordIcon : hidePasswordIcon} />} className='custom-iconbutton' />
                   </InputRightElement>
                 </InputGroup>
                 <div className="forgot-password">
@@ -73,8 +102,10 @@ const Login = () => {
                 <Text className="copyright-text"> © 2021 Company. All Rights Reserved. </Text>
               </Show>
             </div>
-          </Box>
-        </SimpleGrid>
+            {/* </Box> */}
+          </GridItem>
+        </Grid>
+        {/* </SimpleGrid> */}
       </section>
     </>
   );

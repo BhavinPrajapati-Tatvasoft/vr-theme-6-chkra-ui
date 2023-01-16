@@ -1,9 +1,8 @@
 import * as React from 'react';
 import { Helmet } from "react-helmet";
-import { SimpleGrid, Box, Image, Show, Text, InputGroup, Input, InputRightElement, Button, Checkbox, IconButton, Grid, GridItem, } from '@chakra-ui/react';
+import { Image, Show, Text, InputGroup, Input, InputRightElement, Button, Checkbox, IconButton, Grid, GridItem, } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
 import { loginMockup, LogoWhite, showPasswordIcon, hidePasswordIcon } from '../../assets/images';
-import { SearchIcon } from '@chakra-ui/icons';
 import { Typewriter } from "react-simple-typewriter";
 import gsap from 'gsap';
 
@@ -83,7 +82,7 @@ const Login = () => {
                     placeholder='Password'
                   />
                   <InputRightElement>
-                    <IconButton aria-label='Password Icon' onClick={handleClick} icon={<Image src={show ? showPasswordIcon : hidePasswordIcon} />} className='custom-iconbutton' />
+                    <IconButton aria-label='Password Icon' onClick={handleClick} icon={<Image src={show ? showPasswordIcon : hidePasswordIcon} />} className='password-iconbutton' />
                   </InputRightElement>
                 </InputGroup>
                 <div className="forgot-password">
@@ -91,7 +90,7 @@ const Login = () => {
                   <Link to="#" title='forgot password' className='custom-link'>Forgot password</Link>
                 </div>
                 <Button variant='primary' maxW='452px' w='100%' as={Link} to='/dashboard' className='btn-dark' title='Login'>Login</Button>
-                <Text className='sign-up-link'>Don’t have an account? <Link to="#">Sign up </Link></Text>
+                <Text className='sign-up-link'>Don’t have an account? <Link to="#" title='Sign up'>Sign up</Link></Text>
               </form>
               <div className="other-links">
                 <Link to="#" title='Privacy Policy' className='custom-link'>Privacy Policy</Link>

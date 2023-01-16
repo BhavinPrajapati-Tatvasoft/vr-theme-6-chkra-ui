@@ -129,7 +129,7 @@ h6.chakra-text{font-size: 18px;line-height: 24px;font-weight: 300;color: #4B4B4B
 .chakra-input{box-shadow: none !important;}
 /* Custom Card
 --------------------------------------------------------------------------------------------------------*/
-.custom-card{padding: 26px 30px; border: 1px solid #EAEAEA; border-radius: 10px; height: 100%; background-color: #fff;}
+.custom-card{padding: 26px 30px;height: 100%;}
 .card-heading{display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px;}
 .card-heading .header-link { font-weight: 400; font-size: 15px; line-height: 20px; color: #3EAE86; transition: all 300ms ease; position: relative; }
 .card-heading .header-link::after { content: ''; display: block; width: 0; height: 2px; transition: width .3s; background-color: #59B997; }
@@ -202,6 +202,10 @@ button.chakra-button{height: auto; min-width: 0;}
 .chakra-button.custom-iconbutton:hover,
 .chakra-button.custom-iconbutton:focus,
 .chakra-button.custom-iconbutton:focus-visible{background-color: rgba(0, 0, 0, 0.08);box-shadow: none;}
+.chakra-button.password-iconbutton{background-color: transparent;border-radius: 50%;box-shadow: none; width: 30px;height: 30px;}
+.chakra-button.password-iconbutton:hover,
+.chakra-button.password-iconbutton:focus,
+.chakra-button.password-iconbutton:focus-visible{background-color: rgba(0, 0, 0, 0.08);box-shadow: none;}
 
 .main-content{ padding: 127px 40px 40px; transition: all 0.3s; width: calc(100% - var(--sidebar-width)); margin-left: var(--sidebar-width);}
 .open-sidebar .main-content{margin-left: 0;width: 100%;}
@@ -216,7 +220,8 @@ button.chakra-button{height: auto; min-width: 0;}
 .sidebar li .nav-link::after { content: ''; position: absolute; left: 50%; bottom: 0; top: 0; transform: translateX(-50%); height: 100%; width: 0; background-color: #4CC59A; transition: all 300ms ease; z-index: -1;}
 .sidebar li .nav-link:hover::after { width: 100%;}
 .sidebar li .nav-link.active{background-color: #4CC59A;}
-.open-sidebar .sidebar{left: -238px;}
+.open-sidebar .sidebar{left: calc(-1 * var(--sidebar-width));}
+.sidebar li a:not(.active):focus {background-color: rgba(0, 0, 0, 0.08);}
 
 
 /* Dashboard
@@ -267,11 +272,14 @@ button.chakra-button{height: auto; min-width: 0;}
 .file-upload-main input {opacity: 0;position: absolute; left: 0; right: 0; top: 0; bottom: 0; cursor: pointer; z-index: 1;}
 
 .chakra-alert .chakra-image{display: block;width: 20px;height: 20px;}
+.chakra-alert .css-18gnvel{border-radius: 50%;}
+.chakra-alert .css-18gnvel:hover,.chakra-alert .css-18gnvel:focus{background-color: rgba(0, 0, 0, 0.08);box-shadow: none;}
 .inner h5.chakra-text{padding-bottom: 14px;}
 .inner h6.chakra-text{padding-bottom: 15px;}
-.check-group, .radio-group {margin-bottom: 24px;}
+.check-group, .radio-group {margin-bottom: 32px;}
 .snackbar-group {margin-bottom: 36px;}
-.secondary-section {padding-top: 54px;}
+.secondary-section {padding-top: 30px;}
+.btn-groups{padding-bottom: 20px;}
 
 /* Responsive Media Query
 --------------------------------------------------------------------------------------------------------*/
@@ -300,6 +308,11 @@ button.chakra-button{height: auto; min-width: 0;}
     .login-wrapper .other-links {justify-content: center;gap: 16px;flex-wrap: wrap;}
     .login-main .copyright-text {color: #9C9C9C;display: block;padding-top: 16px;text-align: center;}
     .login-wrapper .login-main .MuiTypography-body1.sign-up-link {padding: 30px 0;}
+
+    .custom-card{padding: 16px;}
+
+
+    .open-sidebar{overflow: hidden;}
     .open-sidebar, .show-searchbar{overflow: hidden;}
     .sidebar{left: -238px; top: 0;}
     .overlay{ position: fixed; top: 0; left: 0; bottom: 0; width: 100%; visibility: hidden; opacity: 0; transition: all 0.3s; background-color: rgba(0, 0, 0, 0.5); z-index: 1;}
@@ -326,6 +339,7 @@ button.chakra-button{height: auto; min-width: 0;}
     .main-content{padding: 100px 16px 16px;}
     .weekly-report-card .card-heading {flex-direction: column;gap: 16px;}
     .weekly-report-card h5.chakra-text{margin-right: auto;}
+    .transaction-card ul li a{padding: 8px 0;}
     .icon-btn.chakra-button{height: 44px; width: 44px;}
     .header .toggle-button{margin-right: 10px;}
     .header .logo img{height: 36px; width: 36px;}

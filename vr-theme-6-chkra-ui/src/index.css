@@ -270,8 +270,7 @@ button.chakra-button{height: auto; min-width: 0;}
 .sales-progress .city-info {display: flex;align-items: center;justify-content: space-between;font-weight: 300;font-size: 18px;line-height: 22px;padding-bottom: 13px;}
 .sales-progress .css-rfef5l{background: #EBEBEB;height: 9px;border-radius: 10px;}
 .custom-table-menu.chakra-button{min-width: 0; width: 32px;height: 32px;border-radius: 50%;border: 0; margin: 0 auto;}
-.custom-table-menu.chakra-button:hover,.custom-table-menu.chakra-button:focus{background-color: rgb(90 186 152 / 10%);}
-.custom-table-menu.chakra-button:active, .custom-table-menu.chakra-button[data-active]{background-color: transparent;}
+.custom-table-menu.chakra-button:hover,.custom-table-menu.chakra-button:focus, .custom-table-menu.chakra-button:active, .custom-table-menu.chakra-button[data-active]{background-color: rgb(90 186 152 / 10%);}
 .chakra-table tbody tr:last-child td{border-bottom: 0;}
 
 /* Inner Page
@@ -355,7 +354,6 @@ span.chakra-checkbox__control[data-checked], span.chakra-checkbox__control[data-
     .login-hero {padding: 30px;}
     .login-wrapper .login-main{min-height: calc(100vh - 78px);}
     .main-content{padding: 100px 16px 16px;}
-    .weekly-report-card .card-heading {flex-direction: column;gap: 16px;}
     .weekly-report-card h5.chakra-text{margin-right: auto;}
     .transaction-card ul li a{padding: 8px 0;}
     .icon-btn.chakra-button{height: 44px; width: 44px;}
@@ -381,4 +379,6 @@ span.chakra-checkbox__control[data-checked], span.chakra-checkbox__control[data-
     .login-hero {padding: 20px;}
     .login-wrapper .login-main {padding: 20px;}
     .statistic-card .img-block {width: 54px;height: 54px;}
+    .weekly-report-card .card-heading {flex-direction: column;gap: 8px;}
+    .weekly-report-card .graph-notation {align-self: start;}
 }

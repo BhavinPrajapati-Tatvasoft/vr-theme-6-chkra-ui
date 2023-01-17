@@ -162,7 +162,7 @@ const Dashboard: React.FC = () => {
                     <Text as="p">last week</Text>
                   </div>
                 </div>
-                <AspectRatio ratio={16 / 9}>
+                <AspectRatio ratio={2}>
                   <WeeklyReport />
                 </AspectRatio>
               </Card>

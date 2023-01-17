@@ -64,11 +64,7 @@ export const data = {
 };
 
 const WeeklyReport = () => {
-  return (
-    <div>
-      <Bar options={options} data={data} height={140} />
-    </div>
-  );
+  return <Bar options={options} data={data} height={140} />;
 };
 
 export default WeeklyReport;

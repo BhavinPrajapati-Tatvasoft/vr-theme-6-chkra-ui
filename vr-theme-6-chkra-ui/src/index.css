@@ -149,6 +149,8 @@ div.chakra-table__container{max-width: calc(100vw - 64px);}
 --------------------------------------------------------------------------------------------------------*/
 button.chakra-button{height: auto; min-width: 0;}
 .icon-btn.chakra-button{width: 53px; height: 47px; border-radius: 10px; border:1px solid #EAEAEA;}
+.icon-btn.chakra-button:hover, .icon-btn.chakra-button:focus, .header .chakra-menu__menu-button:hover, .header .chakra-menu__menu-button:focus{background-color: rgb(90 186 152 / 8%); border-color: #59B997;}
+
 .icon-btn .chakra-avatar{height: 26px; width: 26px;}
 
 /* Header
@@ -161,12 +163,12 @@ button.chakra-button{height: auto; min-width: 0;}
 .header .search-wrapper .chakra-input{border-radius: 10px; border-color: #EAEAEA !important; padding: 8px 44px 8px 20px; height: 48px; color: #9C9C9C; background-color: #FFFFFF;}
 .header .search-wrapper .chakra-input:focus{border-color: #59B997 !important;}
 .header .search-wrapper .chakra-button{position: absolute; right: 14px; top: 50%; transform: translateY(-50%); padding: 6px; border-radius: 50%; background-color: transparent !important; border: none !important;height: auto; z-index: 1;}
-.header .search-wrapper .chakra-button:focus, .header .search-wrapper .chakra-button:hover{background-color: rgba(0, 0, 0, 0.1) !important;}
+.header .search-wrapper .chakra-button:focus, .header .search-wrapper .chakra-button:hover{background-color: rgb(90 186 152 / 10%) !important;}
 .header .search-wrapper .chakra-button .chakra-avatar{height: 18px; width: 18px;}
 .header .right-content{display: flex; align-items: center; justify-content: flex-end; flex-grow: 1;}
 .header .right-content .icon-btn{margin: 0 10px;}
-.header .chakra-menu__menu-button{background-color: transparent !important; border: 1px solid transparent; border-radius: 8px; font-weight: 400; padding: 8px 8px 8px 10px;}
-.header .chakra-menu__menu-button:hover, .header .chakra-menu__menu-button:focus{background-color: rgba(0, 0, 0, 0.08) !important;}
+.header .chakra-menu__menu-button{background-color: transparent; border: 1px solid transparent; border-radius: 8px; font-weight: 400; padding: 8px 8px 8px 10px;}
+.header .chakra-menu__menu-button:active,.header .chakra-menu__menu-button[data-active]{background-color: transparent; border-color: transparent;}
 .header .chakra-menu__menu-button >span{display: flex;align-items: center;}
 .header .chakra-menu__menu-button .user-profile-pic{margin-right: 8px;}
 .header .chakra-menu__menu-button .chakra-button__icon{margin-left: 10px;}
@@ -268,6 +270,8 @@ button.chakra-button{height: auto; min-width: 0;}
 .sales-progress .city-info {display: flex;align-items: center;justify-content: space-between;font-weight: 300;font-size: 18px;line-height: 22px;padding-bottom: 13px;}
 .sales-progress .css-rfef5l{background: #EBEBEB;height: 9px;border-radius: 10px;}
 .custom-table-menu.chakra-button{min-width: 0; width: 32px;height: 32px;border-radius: 50%;border: 0; margin: 0 auto;}
+.custom-table-menu.chakra-button:hover,.custom-table-menu.chakra-button:focus{background-color: rgb(90 186 152 / 10%);}
+.custom-table-menu.chakra-button:active, .custom-table-menu.chakra-button[data-active]{background-color: transparent;}
 .chakra-table tbody tr:last-child td{border-bottom: 0;}
 
 /* Inner Page

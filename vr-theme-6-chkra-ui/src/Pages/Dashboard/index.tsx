@@ -91,10 +91,12 @@ const Dashboard: React.FC = () => {
                   <Text as="h3">
                     <CountUp end={6387} />
                   </Text>
-                  <p className="data-info">Property Sold</p>
+                  <Text as="p" className="data-info">
+                    Property Sold
+                  </Text>
                 </div>
                 <div className="img-block">
-                  <img src={barChartIcon} alt="Property Sold" />
+                  <Image src={barChartIcon} alt="Property Sold" />
                 </div>
               </a>
             </GridItem>
@@ -104,10 +106,12 @@ const Dashboard: React.FC = () => {
                   <Text as="h3">
                     <CountUp end={9712} prefix="$" separator="," />
                   </Text>
-                  <p className="data-info">Income</p>
+                  <Text as="p" className="data-info">
+                    Income
+                  </Text>
                 </div>
                 <div className="img-block">
-                  <img src={walletIcon} alt="Income" />
+                  <Image src={walletIcon} alt="Income" />
                 </div>
               </a>
             </GridItem>
@@ -117,10 +121,12 @@ const Dashboard: React.FC = () => {
                   <Text as="h3">
                     <CountUp end={965} />
                   </Text>
-                  <p className="data-info">Expense</p>
+                  <Text as="p" className="data-info">
+                    Expense
+                  </Text>
                 </div>
                 <div className="img-block">
-                  <img src={moneyCoinIcon} alt="Expense" />
+                  <Image src={moneyCoinIcon} alt="Expense" />
                 </div>
               </a>
             </GridItem>
@@ -134,10 +140,12 @@ const Dashboard: React.FC = () => {
                   <Text as="h3">
                     <CountUp end={8723} prefix="$" separator="," />
                   </Text>
-                  <p className="data-info">Property Rented</p>
+                  <Text as="p" className="data-info">
+                    Property Rented
+                  </Text>
                 </div>
                 <div className="img-block">
-                  <img src={keyIcon} alt="Property Rented" />
+                  <Image src={keyIcon} alt="Property Rented" />
                 </div>
               </a>
             </GridItem>
@@ -149,8 +157,8 @@ const Dashboard: React.FC = () => {
                 <div className="card-heading">
                   <Text as="h5">Weekly Report</Text>
                   <div className="graph-notation">
-                    <p>This week</p>
-                    <p>last week</p>
+                    <Text as="p">This week</Text>
+                    <Text as="p">last week</Text>
                   </div>
                 </div>
                 <WeeklyReport />
@@ -170,14 +178,18 @@ const Dashboard: React.FC = () => {
                 <ul>
                   <li>
                     <a href="#" title="Transaction-info">
-                      <img
+                      <Image
                         src={user1}
                         alt="User Name"
                         className="user-profile"
                       />
                       <span className="user-details">
-                        <p className="user-name">Devon Lane</p>
-                        <p className="transaction-date">March 23, 2013</p>
+                        <Text as="p" className="user-name">
+                          Devon Lane
+                        </Text>
+                        <Text as="p" className="transaction-date">
+                          March 23, 2013
+                        </Text>
                       </span>
                       <span className="transaction-amount success">
                         +<CountUp end={600} prefix="$" />
@@ -186,14 +198,18 @@ const Dashboard: React.FC = () => {
                   </li>
                   <li>
                     <a href="#" title="Transaction-info">
-                      <img
+                      <Image
                         src={user2}
                         alt="User Name"
                         className="user-profile"
                       />
                       <span className="user-details">
-                        <p className="user-name">Bessie Cooper</p>
-                        <p className="transaction-date">May 31, 2015</p>
+                        <Text as="p" className="user-name">
+                          Bessie Cooper
+                        </Text>
+                        <Text as="p" className="transaction-date">
+                          May 31, 2015
+                        </Text>
                       </span>
                       <span className="transaction-amount danger">
                         -<CountUp end={400} prefix="$" />
@@ -202,14 +218,18 @@ const Dashboard: React.FC = () => {
                   </li>
                   <li>
                     <a href="#" title="Transaction-info">
-                      <img
+                      <Image
                         src={user3}
                         alt="User Name"
                         className="user-profile"
                       />
                       <span className="user-details">
-                        <p className="user-name">Guy Hawkins</p>
-                        <p className="transaction-date">October 31, 2017</p>
+                        <Text as="p" className="user-name">
+                          Guy Hawkins
+                        </Text>
+                        <Text as="p" className="transaction-date">
+                          October 31, 2017
+                        </Text>
                       </span>
                       <span className="transaction-amount success">
                         +<CountUp end={200} prefix="$" />
@@ -218,14 +238,18 @@ const Dashboard: React.FC = () => {
                   </li>
                   <li>
                     <a href="#" title="Transaction-info">
-                      <img
+                      <Image
                         src={user4}
                         alt="User Name"
                         className="user-profile"
                       />
                       <span className="user-details">
-                        <p className="user-name">Kathryn Murphy</p>
-                        <p className="transaction-date">December 2, 2018</p>
+                        <Text as="p" className="user-name">
+                          Kathryn Murphy
+                        </Text>
+                        <Text as="p" className="transaction-date">
+                          December 2, 2018
+                        </Text>
                       </span>
                       <span className="transaction-amount success">
                         +<CountUp end={450} prefix="$" />
@@ -483,11 +507,11 @@ const Dashboard: React.FC = () => {
                     View more
                   </a>
                 </div>
-                <img src={worldMap} alt="Map" className="img-fluid" />
+                <Image src={worldMap} alt="Map" />
                 <ul className="sales-progress">
                   <li>
                     <span className="city-info">
-                      <p>USA</p>
+                      <Text as="em">USA</Text>
                       <CountUp
                         end={75}
                         suffix="%"
@@ -506,7 +530,7 @@ const Dashboard: React.FC = () => {
                   </li>
                   <li>
                     <span className="city-info">
-                      <p>India</p>
+                      <Text as="em">India</Text>
                       <CountUp
                         end={86}
                         suffix="%"
@@ -524,7 +548,7 @@ const Dashboard: React.FC = () => {
                   </li>
                   <li>
                     <span className="city-info">
-                      <p>Russia</p>
+                      <Text as="em">Russia</Text>
                       <CountUp
                         end={62}
                         suffix="%"

@@ -1,5 +1,5 @@
 import * as React from "react";
-import { List, ListItem } from "@chakra-ui/react";
+import { Image, List, ListItem, Text } from "@chakra-ui/react";
 import { NavLink } from "react-router-dom";
 import {
   dashboardIcon,
@@ -43,8 +43,8 @@ const Sidebar: React.FC = () => {
             className="nav-link"
             onClick={closeSidebar}
           >
-            <img src={dashboardIcon} alt="Dashboard" />
-            <span>Dashboard</span>
+            <Image src={dashboardIcon} alt="Dashboard" />
+            <Text as="span">Dashboard</Text>
           </NavLink>
         </ListItem>
         <ListItem>
@@ -54,8 +54,8 @@ const Sidebar: React.FC = () => {
             className="nav-link"
             onClick={closeSidebar}
           >
-            <img src={userIcon} alt="User" />
-            <span>User</span>
+            <Image src={userIcon} alt="User" />
+            <Text as="span">User</Text>
           </NavLink>
         </ListItem>
         <ListItem>
@@ -65,8 +65,8 @@ const Sidebar: React.FC = () => {
             className="nav-link"
             onClick={closeSidebar}
           >
-            <img src={maintenanceIcon} alt="Maintenance" />
-            <span>Maintenance</span>
+            <Image src={maintenanceIcon} alt="Maintenance" />
+            <Text as="span">Maintenance</Text>
           </NavLink>
         </ListItem>
         <ListItem>
@@ -76,8 +76,8 @@ const Sidebar: React.FC = () => {
             className="nav-link"
             onClick={closeSidebar}
           >
-            <img src={offerIcon} alt="Offers" />
-            <span>Offers</span>
+            <Image src={offerIcon} alt="Offers" />
+            <Text as="span">Offers</Text>
           </NavLink>
         </ListItem>
         <ListItem>
@@ -87,8 +87,8 @@ const Sidebar: React.FC = () => {
             className="nav-link"
             onClick={closeSidebar}
           >
-            <img src={salesIcon} alt="Sales" />
-            <span>Sales</span>
+            <Image src={salesIcon} alt="Sales" />
+            <Text as="span">Sales</Text>
           </NavLink>
         </ListItem>
         <ListItem>
@@ -98,8 +98,8 @@ const Sidebar: React.FC = () => {
             className="nav-link"
             onClick={closeSidebar}
           >
-            <img src={settingsIcon} alt="Settings" />
-            <span>Settings</span>
+            <Image src={settingsIcon} alt="Settings" />
+            <Text as="span">Settings</Text>
           </NavLink>
         </ListItem>
       </List>

@@ -55,7 +55,7 @@ const Login = () => {
               </Link>
               <Show above="lg">
                 <div className="login-mockup">
-                  <img
+                  <Image
                     src={loginMockup}
                     alt="Mockup"
                     onLoad={(e) => {

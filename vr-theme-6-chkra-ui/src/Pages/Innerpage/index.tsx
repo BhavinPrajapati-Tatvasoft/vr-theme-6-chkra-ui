@@ -255,11 +255,11 @@ const Innerpage = () => {
                     placeholder="Upload"
                   />
                   <div className="file-content">
-                    <img src={uploadIcon} alt="Upload Icon" />
-                    <h4>Upload</h4>
+                    <Image src={uploadIcon} alt="Upload Icon" />
+                    <Text as="h4">Upload</Text>
                   </div>
                 </div>
-                <p>No item Selected</p>
+                <Text as="p">No item Selected</Text>
               </div>
 
               {/* -------- Checkbox start ---------  */}

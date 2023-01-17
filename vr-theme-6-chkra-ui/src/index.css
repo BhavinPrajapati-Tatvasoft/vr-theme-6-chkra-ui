@@ -143,7 +143,6 @@ h6.chakra-text{font-size: 18px;line-height: 24px;font-weight: 300;color: #4B4B4B
 .card-heading .header-link::after { content: ''; display: block; width: 0; height: 2px; transition: width .3s; background-color: #59B997; }
 .card-heading .header-link:hover::after,
 .card-heading .header-link:focus::after { width: 100%; }
-
 div.chakra-table__container{max-width: calc(100vw - 64px);}
 
 /* Button
@@ -223,6 +222,7 @@ button.chakra-button{height: auto; min-width: 0;}
 .sidebar li:not(:last-child){margin-bottom: 5px;}
 .sidebar li .nav-link{display: flex;align-items: center; color: #FFFFFF; padding: 15px 30px; position: relative;}
 .sidebar li .nav-link img{margin-right: 10px;}
+.sidebar li .nav-link span{color: #FFFFFF;}
 .sidebar li .nav-link::after { content: ''; position: absolute; left: 50%; bottom: 0; top: 0; transform: translateX(-50%); height: 100%; width: 0; background-color: #4CC59A; transition: all 300ms ease; z-index: -1;}
 .sidebar li .nav-link:hover::after { width: 100%;}
 .sidebar li .nav-link.active{background-color: #4CC59A;}
@@ -242,10 +242,9 @@ button.chakra-button{height: auto; min-width: 0;}
 .statistic-card.red{background-color: #FFE4E4; border-color: #FFCACA;}
 .statistic-card.red:hover,.statistic-card.red:focus{border-color: #ff2929;}
 .statistic-card h3{color: #000; padding-bottom: 16px; font-weight: 500;}
-.statistic-card p{color: #4B4B4B; }
 .statistic-card .img-block{ margin-left: 8px; width: 86px; height: 86px; border-radius: 50%; background-color: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;}
 .graph-notation { display: flex; align-items: center;}
-.graph-notation p { font-weight: 400; font-size: 15px; color: #4B4B4B; display: flex; align-items: center; }
+.graph-notation p { font-size: 15px; display: flex; align-items: center; }
 .graph-notation p::before { content: ''; display: block; width: 12px; height: 12px; border-radius: 50%; margin-right: 9px; }
 .graph-notation p:first-child::before { background-color: #3EAE86; }
 .graph-notation p:not(:first-child):before { margin-left: 18px;}
@@ -254,7 +253,7 @@ button.chakra-button{height: auto; min-width: 0;}
 .transaction-card ul li:last-child a { padding-bottom: 6px; }
 .transaction-card ul li:not(:last-child) { border-bottom: 1px solid #EAEAEA; }
 .transaction-card .user-profile { margin-right: 21px; width: 48px; height: 48px; border-radius: 50%; }
-.transaction-card .user-name {color: #4B4B4B;padding-bottom: 5px; }
+.transaction-card .user-name {padding-bottom: 5px; }
 .transaction-card .transaction-date { font-size: 12px; line-height: 16px; color: #9C9C9C;}
 .transaction-card .transaction-amount{font-size: 20px;line-height: 26px;display: flex;align-items: center;margin-left: auto;}
 .transaction-card .transaction-amount.success{color: #6CCD87;}
@@ -268,19 +267,20 @@ button.chakra-button{height: auto; min-width: 0;}
 .sales-progress li:not(:last-child) { padding-bottom: 27px; }
 .sales-progress .city-info {display: flex;align-items: center;justify-content: space-between;font-weight: 300;font-size: 18px;line-height: 22px;padding-bottom: 13px;}
 .sales-progress .css-rfef5l{background: #EBEBEB;height: 9px;border-radius: 10px;}
-
 .custom-table-menu.chakra-button{min-width: 0; width: 32px;height: 32px;border-radius: 50%;border: 0; margin: 0 auto;}
 .chakra-table tbody tr:last-child td{border-bottom: 0;}
 
 /* Inner Page
 --------------------------------------------------------------------------------------------------------*/
-.file-upload-main p {padding-bottom: 0;font-size: 15px;line-height: 20px;font-weight: 400;color: #9C9C9C;margin-left: 19px;}
+.file-upload-main p {padding-bottom: 0;font-size: 15px;line-height: 20px;color: #A5A5A5;margin-left: 19px;}
 .file-upload-main .file-upload-wrapper{position: relative;}
 .file-upload-main {display: flex;align-items: center;margin-bottom: 32px;}
-.file-upload-main h4 {padding-bottom: 0;margin-left: 8px;}
+.file-upload-main h4 {padding-bottom: 0;margin-left: 8px; color: #6D6D6D;}
 .file-content {display: flex;align-items: center;justify-content: center;width: 124px;height: 39px;background-color: #F6F6F6; border-radius: 5px;cursor: pointer; color: #6D6D6D; position: relative;}
 .file-upload-main input {opacity: 0;position: absolute; left: 0; right: 0; top: 0; bottom: 0; cursor: pointer; z-index: 1;}
 
+/* Alert
+--------------------------------------------------------------------------------------------------------*/
 .chakra-alert .chakra-image{display: block;width: 20px;height: 20px;}
 .chakra-alert .css-18gnvel{border-radius: 50%;}
 .chakra-alert .css-18gnvel:hover,.chakra-alert .css-18gnvel:focus{background-color: rgba(0, 0, 0, 0.08);box-shadow: none;}

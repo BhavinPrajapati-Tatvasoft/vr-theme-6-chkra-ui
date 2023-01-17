@@ -1,5 +1,6 @@
 import * as React from "react";
 import {
+  AspectRatio,
   Card,
   Grid,
   GridItem,
@@ -161,7 +162,9 @@ const Dashboard: React.FC = () => {
                     <Text as="p">last week</Text>
                   </div>
                 </div>
-                <WeeklyReport />
+                <AspectRatio ratio={16 / 9}>
+                  <WeeklyReport />
+                </AspectRatio>
               </Card>
             </GridItem>
             {/* Weekly Report Card End */}

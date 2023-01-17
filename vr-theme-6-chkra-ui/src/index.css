@@ -144,7 +144,7 @@ h6.chakra-text{font-size: 18px;line-height: 24px;font-weight: 300;color: #4B4B4B
 .card-heading .header-link:hover::after,
 .card-heading .header-link:focus::after { width: 100%; }
 
-div.chakra-table__container{width: calc(100vw - 64px);}
+div.chakra-table__container{max-width: calc(100vw - 64px);}
 
 /* Button
 --------------------------------------------------------------------------------------------------------*/
@@ -192,7 +192,7 @@ button.chakra-button{height: auto; min-width: 0;}
 .login-wrapper .form-wrapper form {margin: auto 0;padding: 10px 0;}
 .login-wrapper .form-wrapper .mobile-logo {display: none;}
 .login-wrapper .login-main .sign-up-link {padding-top: 30px;font-weight: 400;font-size: 15px;line-height: 17px;color: #424242;text-align: center;}
-.login-wrapper .login-main .sign-up-link a {font-weight: 700;font-size: 15px;line-height: 17px;text-transform: uppercase;color: #59B997;position: relative;}
+.login-wrapper .login-main .sign-up-link a {font-weight: 700;font-size: 15px;line-height: 17px;text-transform: uppercase;color: #59B997;position: relative; margin-left: 4px;}
 .login-wrapper .login-main .sign-up-link a::after {content: '';display: block;width: 0;height: 2px;transition: width .3s;background-color: #59B997;position: absolute;left: 0;}
 .login-wrapper .login-main .sign-up-link a:hover::after,
 .login-wrapper .login-main .sign-up-link a:focus::after {width: 100%;}
@@ -269,7 +269,7 @@ button.chakra-button{height: auto; min-width: 0;}
 .sales-progress .city-info {display: flex;align-items: center;justify-content: space-between;font-weight: 300;font-size: 18px;line-height: 22px;padding-bottom: 13px;}
 .sales-progress .css-rfef5l{background: #EBEBEB;height: 9px;border-radius: 10px;}
 
-.custom-table-menu.chakra-button{min-width: 0; width: 32px;height: 32px;border-radius: 50%;border: 0;}
+.custom-table-menu.chakra-button{min-width: 0; width: 32px;height: 32px;border-radius: 50%;border: 0; margin: 0 auto;}
 .chakra-table tbody tr:last-child td{border-bottom: 0;}
 
 /* Inner Page
@@ -340,7 +340,7 @@ span.chakra-checkbox__control[data-checked], span.chakra-checkbox__control[data-
     .header .search-toggle img{height: 21px;width: 21px;}
     .header .toggle-button{margin-right: 20px;}
     .header .chakra-menu__menu-button{padding: 4px;}
-    .header .search-wrapper{position: fixed;left: 0;right: 0;top: -100%;background-color: #3EAE86;max-width: none; transition: all 0.3s; padding: 0 16px; z-index: 1;}
+    .header .search-wrapper{position: fixed;left: 0;right: 0;top: -100px;background-color: #3EAE86;max-width: none; transition: all 0.3s; padding: 0 16px; z-index: 1;}
     .header .search-wrapper>div{position: relative; max-width: 450px; margin: 20px auto;}
     .show-searchbar .search-wrapper{top: 0;}
 }

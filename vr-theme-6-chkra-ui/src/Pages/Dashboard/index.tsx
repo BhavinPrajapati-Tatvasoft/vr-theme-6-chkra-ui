@@ -254,7 +254,7 @@ const Dashboard: React.FC = () => {
                         <Th>SKU</Th>
                         <Th>Name</Th>
                         <Th>Email</Th>
-                        <Th className="text-center">Action</Th>
+                        <Th>Action</Th>
                       </Tr>
                     </Thead>
                     <Tbody>

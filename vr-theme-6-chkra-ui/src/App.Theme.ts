@@ -309,6 +309,9 @@ const theme = extendTheme({
             textTransform: "capitalize",
             color: "#9C9C9C",
             fontWeight: "400",
+            "&:last-child": {
+              textAlign: "center",
+            },
           },
         },
       },

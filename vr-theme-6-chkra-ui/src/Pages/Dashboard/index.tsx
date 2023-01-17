@@ -42,7 +42,6 @@ const { useLayoutEffect } = React;
 
 const Dashboard: React.FC = () => {
   //GSAP Animation
-  const progressTimelineMain = useRef(null);
   useLayoutEffect(() => {
     let statisticsSvg = gsap.timeline();
     statisticsSvg.fromTo(

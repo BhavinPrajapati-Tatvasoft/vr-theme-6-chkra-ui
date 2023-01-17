@@ -136,7 +136,7 @@ const Login = () => {
                   Login
                 </Button>
                 <Text className="sign-up-link">
-                  Don’t have an account?{" "}
+                  Don’t have an account?
                   <Link to="#" title="Sign up">
                     Sign up
                   </Link>

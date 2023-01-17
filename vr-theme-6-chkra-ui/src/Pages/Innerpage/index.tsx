@@ -10,7 +10,6 @@ import {
   Grid,
   GridItem,
   HStack,
-  Icon,
   IconButton,
   Image,
   Input,
@@ -285,7 +284,7 @@ const Innerpage = () => {
               {/* -------- Snackbar start ---------  */}
               <Text as="h6">Snack Bar</Text>
               <SimpleGrid
-                gap={6}
+                gap={{base: '4', lg: '6'}}
                 columns={{ base: 1, lg: 2 }}
                 className="snackbar-group"
               >

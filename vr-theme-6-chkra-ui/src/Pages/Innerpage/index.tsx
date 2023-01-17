@@ -232,7 +232,6 @@ const Innerpage = () => {
                     </Select>
                   </InputGroup>
                 </GridItem>
-
                 <GridItem colSpan={{ base: 12, lg: 3, md: 6 }}>
                   <InputGroup>
                     <Input type="text" placeholder="Error" isInvalid />

@@ -36,7 +36,6 @@ import Header from "../../Components/Header";
 import Sidebar from "../../Components/Sidebar";
 import CountUp from "react-countup";
 import WeeklyReport from "../../Components/Charts/weeklyReport";
-import { useRef } from "react";
 import gsap from "gsap";
 const { useLayoutEffect } = React;
 
